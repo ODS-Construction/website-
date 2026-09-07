@@ -6,6 +6,7 @@
     { "source": "/process", "destination": "/ODS Construction Process.dc.html" },
     { "source": "/projects", "destination": "/ODS Construction Projects.dc.html" },
     { "source": "/services", "destination": "/ODS Construction Services.dc.html" },
-    { "source": "/services/:slug", "destination": "/ODS Construction Services.dc.html" }
+    { "source": "/services/:slug", "destination": "/ODS Construction Services.dc.html" },
+    { "source": "/thank-you", "destination": "/ODS Construction Thank You.dc.html" }
   ]
 }

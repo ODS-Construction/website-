@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Thank You | ODS Construction</title>
+<meta name="description" content="Thanks for reaching out to ODS Construction — we've received your request and will be in touch shortly.">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html { scroll-behavior: smooth; }
+html, body, #dc-root, .sc-host { height: auto; min-height: 100%; }
+body { margin: 0; background: #FFFFFF; color: #3A3F47; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #10264A; }
+a:hover { color: #0B4A8F; }
+:focus-visible { outline: 2px solid #0B4A8F; outline-offset: 3px; }
+</style>
+</helmet>
+
+<header style="position:sticky; top:0; z-index:40; background: {{ headerBg }}; color: {{ navColor }}; box-shadow: {{ headerShadow }}; transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease">
+  <div style="max-width:1240px; margin:0 auto; padding:0 24px; height:88px; display:flex; align-items:center; justify-content:space-between; gap:32px">
+    <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color: {{ brandColor }}; line-height:1; transition:color 200ms ease">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+      <span style="font: 600 11px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:4px">construction</span>
+    </a>
+    <sc-if value="{{ isDesktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex; align-items:center; gap:36px; height:88px">
+        <a href="/services" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Services</a>
+        <a href="/projects" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Projects</a>
+        <a href="/process" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Process</a>
+        <a href="/about" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">About</a>
+        <a href="/contact" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Contact</a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobileNav }}" hint-placeholder-val="{{ false }}">
+      <button type="button" aria-label="Open menu" aria-expanded="{{ menuOpen }}" onClick="{{ toggleMenu }}" style="background:none; border:none; padding:10px; cursor:pointer; color:inherit; display:flex; flex-direction:column; gap:6px; min-width:44px; min-height:44px; justify-content:center">
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Menu" style="position:fixed; inset:0; z-index:60; background:#FFFFFF; display:flex; flex-direction:column; padding:24px">
+    <div style="display:flex; justify-content:space-between; align-items:center; height:40px">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em; color:#10264A">ODS</span>
+      <button type="button" aria-label="Close menu" onClick="{{ toggleMenu }}" style="background:none; border:none; cursor:pointer; color:#101820; font:600 15px Inter, system-ui, sans-serif; min-width:44px; min-height:44px">Close</button>
+    </div>
+    <nav aria-label="Primary" style="display:flex; flex-direction:column; gap:8px; margin-top:48px">
+      <a href="/services" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Services</a>
+      <a href="/projects" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Projects</a>
+      <a href="/process" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Process</a>
+      <a href="/about" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">About</a>
+      <a href="/contact" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Contact</a>
+    </nav>
+    <a href="/" onClick="{{ toggleMenu }}" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none">Back to homepage</a>
+  </div>
+</sc-if>
+
+<main>
+
+<!-- CONFIRMATION -->
+<section ref="{{ bandRef }}" data-screen-label="Thank you" style="margin-top:-88px; padding-top:88px; position:relative; background:#10264A; overflow:hidden; min-height:min(640px, 78vh); display:flex; align-items:center">
+  <div aria-hidden="true" style="position:absolute; inset:0; opacity:0.08; background-image:linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size:96px 96px; pointer-events:none"></div>
+  <div style="position:relative; max-width:700px; margin:0 auto; box-sizing:border-box; padding:64px 24px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:28px">
+    <div aria-hidden="true" style="width:76px; height:76px; border-radius:50%; border:1.5px solid rgba(255,255,255,0.4); display:grid; place-items:center">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" style="stroke-width:2px; stroke-linecap:round; stroke-linejoin:round"><path d="M4 12l5 5L20 6"></path></svg>
+    </div>
+    <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.7)">Request received</span>
+    <h1 style="margin:0; font:800 clamp(34px, 4.5vw, 56px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF; text-wrap:pretty">Thanks — we've got it.</h1>
+    <p style="margin:0; max-width:480px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">We'll be in touch shortly. If it's urgent, call <a href="tel:+12424708131" style="color:#FFFFFF; font-weight:600; text-decoration:underline; text-underline-offset:4px">(242) 470-8131</a>.</p>
+    <a href="/" style="margin-top:12px; display:inline-flex; align-items:center; gap:12px; background:transparent; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none; border:1.5px solid #FFFFFF" style-hover="background:#FFFFFF; color:#10264A">Back to homepage</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="padding:clamp(72px, 8vw, 120px) 0 40px">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap">
+      <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color:#10264A; line-height:1">
+        <span style="font: 800 34px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+        <span style="font: 600 12px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:5px">construction</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(20px, 3vw, 48px)">
+        <p style="margin:0; font:800 clamp(22px, 2.4vw, 34px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Built Right, Built to Last.</p>
+        <button type="button" aria-label="Scroll to top" onClick="{{ scrollTop }}" style="width:64px; height:64px; flex:none; background:#10264A; border:none; color:#FFFFFF; display:grid; place-items:center; cursor:pointer; border-radius:2px" style-hover="background:#0B4A8F"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"></path></svg></button>
+      </div>
+    </div>
+    <div style="height:1px; background:#DDE1E5"></div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:clamp(40px, 5vw, 72px)">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Contact</h3>
+        <a href="tel:+12424708131" style="font:800 clamp(30px, 3vw, 44px)/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none">(242) 470-8131</a>
+        <a href="{{ emailHref }}" style="font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">{{ emailText }}</a>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Palmetto Point<br>Eleuthera, The Bahamas</p>
+      </div>
+      <nav aria-label="Footer" style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Links</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px">
+          <li><a href="/services" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
+          <li><a href="/projects" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
+          <li><a href="/process" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
+          <li><a href="/about" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
+          <li><a href="/contact" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
+          <li><a href="/privacy" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex; flex-direction:column; gap:20px">
+          <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Find us on</h3>
+          <div style="display:flex; gap:12px; align-items:center">
+            <sc-for list="{{ socialLinks }}" as="s" hint-placeholder-count="0">
+              <a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.label }}" style="width:44px; height:44px; border-radius:50%; background:#EFF2F4; display:grid; place-items:center; font:600 12px Inter, system-ui, sans-serif; color:#10264A; text-decoration:none" style-hover="background:#10264A; color:#FFFFFF">{{ s.abbr }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="height:1px; background:#DDE1E5"></div>
+    <p style="margin:0; text-align:center; font:400 13px Inter, system-ui, sans-serif; color:#7A828C">© 2026 ODS Construction. All rights reserved.</p>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;},&quot;facebookUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;}}">
+class Component extends DCLogic {
+  state = {
+    emailHref: '#contact',
+    emailText: 'Email us',
+    menuOpen: false,
+    scrolled: false,
+    vw: typeof window !== 'undefined' ? window.innerWidth : 1440,
+  };
+
+  bandRef = React.createRef();
+
+  componentDidMount() {
+    const addr = ['info', 'odsconstruction', 'com'].reduce((a, p, i) => a + (i === 1 ? '@' : i === 2 ? '.' : '') + p, '');
+    this.setState({ emailHref: 'mai' + 'lto:' + addr, emailText: addr });
+    this._onResize = () => this.setState({ vw: window.innerWidth });
+    this._onScroll = () => {
+      const band = this.bandRef.current;
+      const threshold = band ? Math.max(band.offsetHeight - 88, 40) : 300;
+      const s = window.scrollY > threshold;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('resize', this._onResize);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  renderVals() {
+    const { emailHref, emailText, menuOpen, scrolled, vw } = this.state;
+    const isDesktopNav = vw >= 1024;
+    const onNavy = !scrolled && !menuOpen;
+    return {
+      emailHref,
+      emailText,
+      isDesktopNav,
+      isMobileNav: !isDesktopNav,
+      menuOpen,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      headerBg: onNavy ? 'rgba(255,255,255,0)' : '#FFFFFF',
+      navColor: onNavy ? '#FFFFFF' : '#101820',
+      brandColor: onNavy ? '#FFFFFF' : '#10264A',
+      headerShadow: scrolled ? '0 1px 0 #DDE1E5' : '0 1px 0 rgba(221,225,229,0)',
+      bandRef: this.bandRef,
+      socialLinks: [
+        { href: this.props.instagramUrl, label: 'ODS Construction on Instagram', abbr: 'IG' },
+        { href: this.props.facebookUrl, label: 'ODS Construction on Facebook', abbr: 'FB' },
+      ].filter((s) => typeof s.href === 'string' && /^https?:\/\//.test(s.href.trim())),
+      showSocialRow: [this.props.instagramUrl, this.props.facebookUrl].some((u) => typeof u === 'string' && /^https?:\/\//.test(u.trim())),
+      scrollTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+    };
+  }
+}
+</script>
+</body>
+</html>

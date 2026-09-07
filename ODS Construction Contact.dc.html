@@ -96,7 +96,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
         <p style="margin:0; max-width:620px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Tell us what you have in mind and we'll come and look at it. The site visit and the written estimate are free, and there's no obligation to build. Fields marked with an asterisk (*) are required — leave anything else blank if you're not sure and we'll ask.</p>
       </div>
 
-      <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
         <form ref="{{ formRef }}" onSubmit="{{ submitForm }}" noValidate aria-label="Request an estimate" style="display:grid; grid-template-columns: {{ fieldCols }}; column-gap:24px; row-gap:22px">
 
           <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
@@ -231,14 +230,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
             <p style="margin:0; font:400 14px/1.5 Inter, system-ui, sans-serif; color:#7A828C">We read every message ourselves. [CONFIRM — add a response-time commitment here, e.g. "You'll hear back within one business day." Only include it if you'll hold to it.]</p>
           </div>
         </form>
-      </sc-if>
-
-      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-        <div role="status" style="background:#EFF2F4; padding:40px; display:flex; flex-direction:column; gap:12px">
-          <p style="margin:0; font:800 clamp(24px, 2.2vw, 30px)/1.15 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Thanks — we've got it.</p>
-          <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We'll be in touch shortly. If it's urgent, call <a href="tel:+12424708131" style="color:#10264A; font-weight:600; text-decoration:none">(242) 470-8131</a>.</p>
-        </div>
-      </sc-if>
     </div>
 
     <aside aria-label="Contact details" style="min-width:0; display:flex; flex-direction:column; gap:40px; padding-top: {{ asideTop }}">
@@ -549,8 +540,6 @@ class Component extends DCLogic {
       asideTop: d ? '14px' : '0',
       fieldCols: vw >= 640 ? '1fr 1fr' : '1fr',
       err, bc, has, inv,
-      showForm: status !== 'sent',
-      sent: status === 'sent',
       failed: status === 'failed',
       sending: status === 'sending',
       submitLabel: status === 'sending' ? 'Sending…' : 'Send request',
@@ -570,7 +559,7 @@ class Component extends DCLogic {
         e.preventDefault();
         const form = e.currentTarget;
         const fd = new FormData(form);
-        if (String(fd.get('company_website') || '').trim()) { this.setState({ status: 'sent' }); return; }
+        if (String(fd.get('company_website') || '').trim()) { window.location.href = '/thank-you'; return; }
         const errs = this._validate(fd);
         if (Object.keys(errs).length) {
           this.setState({ errors: errs, status: 'idle' }, () => {
@@ -585,12 +574,13 @@ class Component extends DCLogic {
         this.setState({ status: 'sending', errors: {} });
         try {
           const ok = await this._send(fd);
-          this.setState({ status: ok ? 'sent' : 'failed' });
+          if (ok) { window.location.href = '/thank-you'; return; }
+          this.setState({ status: 'failed' });
         } catch (_) {
           this.setState({ status: 'failed' });
         }
       },
-      showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen && status !== 'sent',
+      showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen,
       socialLinks: [
         { href: this.props.instagramUrl, label: 'ODS Construction on Instagram', abbr: 'IG' },
         { href: this.props.facebookUrl, label: 'ODS Construction on Facebook', abbr: 'FB' },

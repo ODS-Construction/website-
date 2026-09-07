@@ -403,7 +403,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       </nav>
       <div style="display:flex; flex-direction:column; gap:20px">
         <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Request an estimate</h3>
-        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
           <form onSubmit="{{ submitForm }}" aria-label="Request an estimate" style="display:flex; flex-direction:column; gap:12px">
             <label for="f-name" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Name</label>
             <input id="f-name" name="name" type="text" required placeholder="Name" autocomplete="name" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
@@ -427,13 +426,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
             <sc-if value="{{ sendFailed }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">Something went wrong — please call (242) 470-8131 or try again.</p></sc-if>
             <button type="submit" disabled="{{ sending }}" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">{{ submitLabel }} <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
           </form>
-        </sc-if>
-        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
-          <div role="status" style="background:#EFF2F4; padding:32px; display:flex; flex-direction:column; gap:8px">
-            <p style="margin:0; font:800 22px/1.2 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Thank you — we've got your request.</p>
-            <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">We'll be in touch to arrange a site visit. For anything urgent, call (242) 470-8131.</p>
-          </div>
-        </sc-if>
         <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
           <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
             <p style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Find us on</p>
@@ -473,7 +465,6 @@ class Component extends DCLogic {
     openFaq: null,
     menuOpen: false,
     scrolled: false,
-    submitted: false,
     vw: typeof window !== 'undefined' ? window.innerWidth : 1440,
   };
 
@@ -550,7 +541,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const { emailHref, emailText, openProject, openFaq, menuOpen, scrolled, submitted, vw, sending, sendFailed } = this.state;
+    const { emailHref, emailText, openProject, openFaq, menuOpen, scrolled, vw, sending, sendFailed } = this.state;
     const isDesktopNav = vw >= 1024;
     return {
       emailHref,
@@ -567,8 +558,6 @@ class Component extends DCLogic {
         { href: this.props.facebookUrl, label: 'ODS Construction on Facebook', abbr: 'FB' },
       ].filter((s) => typeof s.href === 'string' && /^https?:\/\//.test(s.href.trim())),
       showSocialRow: [this.props.instagramUrl, this.props.facebookUrl].some((u) => typeof u === 'string' && /^https?:\/\//.test(u.trim())),
-      submitted,
-      notSubmitted: !submitted,
       sending,
       sendFailed,
       submitLabel: sending ? 'Sending…' : 'Send request',
@@ -584,7 +573,8 @@ class Component extends DCLogic {
           const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
           const data = await res.json().catch(() => null);
           const ok = res.ok && !!data && data.success !== false;
-          this.setState({ sending: false, submitted: ok, sendFailed: !ok });
+          if (ok) { window.location.href = '/thank-you'; return; }
+          this.setState({ sending: false, sendFailed: true });
         } catch (_) {
           this.setState({ sending: false, sendFailed: true });
         }
