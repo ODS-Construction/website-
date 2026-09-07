@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contact — Request an Estimate | ODS Construction, Eleuthera</title>
+<meta name="description" content="Request a free site visit and written estimate from ODS Construction in Palmetto Point, Eleuthera. Call (242) 470-8131.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact ODS Construction","url":"https://odsconstruction.com/contact","mainEntity":{"@type":"GeneralContractor","@id":"https://odsconstruction.com/#organization","url":"https://odsconstruction.com","email":"info@odsconstruction.com","name":"ODS Construction","telephone":"+1-242-470-8131","address":{"@type":"PostalAddress","addressLocality":"Palmetto Point","addressRegion":"Eleuthera","addressCountry":"BS"},"areaServed":["Harbour Island","North Eleuthera","Gregory Town","Hatchet Bay","Governors Harbour","Palmetto Point","Windermere Island","Rock Sound","Tarpum Bay","South Eleuthera"],"contactPoint":{"@type":"ContactPoint","telephone":"+1-242-470-8131","contactType":"sales","areaServed":"BS","availableLanguage":"en"}}}</script>
+<style>
+html { scroll-behavior: smooth; }
+html, body, #dc-root, .sc-host { height: auto; min-height: 100%; }
+body { margin: 0; background: #FFFFFF; color: #3A3F47; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #10264A; }
+a:hover { color: #0B4A8F; }
+:focus-visible { outline: 2px solid #0B4A8F; outline-offset: 3px; }
+input::placeholder, textarea::placeholder { color: #7A828C; }
+</style>
+</helmet>
+
+<header style="position:sticky; top:0; z-index:40; background: {{ headerBg }}; color: {{ navColor }}; box-shadow: {{ headerShadow }}; transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease">
+  <div style="max-width:1240px; margin:0 auto; padding:0 24px; height:88px; display:flex; align-items:center; justify-content:space-between; gap:32px">
+    <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color: {{ brandColor }}; line-height:1; transition:color 200ms ease">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+      <span style="font: 600 11px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:4px">construction</span>
+    </a>
+    <sc-if value="{{ isDesktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex; align-items:center; gap:36px; height:88px">
+        <a href="/services" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Services</a>
+        <a href="/projects" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Projects</a>
+        <a href="/process" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Process</a>
+        <a href="/about" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">About</a>
+        <a href="/contact" aria-current="page" style="position:relative; display:flex; align-items:center; height:88px; font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Contact<span aria-hidden="true" style="position:absolute; left:0; right:0; bottom:0; height:3px; background:currentColor"></span></a>
+        <button type="button" aria-label="Search" style="background:none; border:none; padding:8px; margin-left:8px; cursor:pointer; color:inherit; display:flex">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" style="stroke-width:1.6px; stroke-linecap:round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"></circle><line x1="13" y1="13" x2="18" y2="18"></line></svg>
+        </button>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobileNav }}" hint-placeholder-val="{{ false }}">
+      <button type="button" aria-label="Open menu" aria-expanded="{{ menuOpen }}" onClick="{{ toggleMenu }}" style="background:none; border:none; padding:10px; cursor:pointer; color:inherit; display:flex; flex-direction:column; gap:6px; min-width:44px; min-height:44px; justify-content:center">
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Menu" style="position:fixed; inset:0; z-index:60; background:#FFFFFF; display:flex; flex-direction:column; padding:24px">
+    <div style="display:flex; justify-content:space-between; align-items:center; height:40px">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em; color:#10264A">ODS</span>
+      <button type="button" aria-label="Close menu" onClick="{{ toggleMenu }}" style="background:none; border:none; cursor:pointer; color:#101820; font:600 15px Inter, system-ui, sans-serif; min-width:44px; min-height:44px">Close</button>
+    </div>
+    <nav aria-label="Primary" style="display:flex; flex-direction:column; gap:8px; margin-top:48px">
+      <a href="/services" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Services</a>
+      <a href="/projects" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Projects</a>
+      <a href="/process" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Process</a>
+      <a href="/about" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">About</a>
+      <a href="/contact" aria-current="page" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Contact</a>
+    </nav>
+    <a href="#estimate" onClick="{{ toggleMenu }}" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none">Request an estimate</a>
+  </div>
+</sc-if>
+
+<main>
+
+<!-- 1 PAGE HEADER -->
+<section id="top" ref="{{ bandRef }}" data-screen-label="Page header" style="margin-top:-88px; padding-top:88px; background:#10264A">
+  <div style="display:grid; grid-template-columns: {{ splitCols }}; min-height:max(420px, 48vh)">
+    <div style="display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(56px, 7vw, 88px) clamp(32px, 5vw, 80px) clamp(56px, 7vw, 88px) max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+      <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.7)">Get in touch</span>
+      <h1 style="margin:0; max-width:12ch; font:800 clamp(40px, 5.5vw, 76px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF; text-wrap:pretty">Let's talk about your project</h1>
+    </div>
+    <div style="position:relative; min-height:0; overflow:hidden; aspect-ratio: {{ headerImgRatio }}">
+      <div style="position:absolute; inset:0"><image-slot id="contact-header" shape="rect" placeholder="contact-header.jpg — 1400×1100"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 FORM + CONTACT DETAILS -->
+<section id="estimate" data-screen-label="Request an estimate" style="padding:clamp(72px, 9vw, 140px) 0">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:grid; grid-template-columns: {{ mainCols }}; gap:clamp(56px, 7vw, 90px); align-items:start">
+
+    <div style="min-width:0; display:flex; flex-direction:column; gap:36px">
+      <div style="display:flex; flex-direction:column; gap:24px">
+        <h2 style="margin:0; font:800 clamp(34px, 3.6vw, 52px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Request an Estimate</h2>
+        <p style="margin:0; max-width:620px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Tell us what you have in mind and we'll come and look at it. The site visit and the written estimate are free, and there's no obligation to build. Fields marked with an asterisk (*) are required — leave anything else blank if you're not sure and we'll ask.</p>
+      </div>
+
+      <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+        <form ref="{{ formRef }}" onSubmit="{{ submitForm }}" noValidate aria-label="Request an estimate" style="display:grid; grid-template-columns: {{ fieldCols }}; column-gap:24px; row-gap:22px">
+
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-first" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">First Name <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <input id="c-first" name="firstName" type="text" required autocomplete="given-name" aria-required="true" aria-invalid="{{ inv.firstName }}" aria-describedby="err-firstName" onInput="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.firstName }}; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+            <sc-if value="{{ has.firstName }}" hint-placeholder-val="{{ false }}"><p id="err-firstName" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.firstName }}</p></sc-if>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-last" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Last Name <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <input id="c-last" name="lastName" type="text" required autocomplete="family-name" aria-required="true" aria-invalid="{{ inv.lastName }}" aria-describedby="err-lastName" onInput="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.lastName }}; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+            <sc-if value="{{ has.lastName }}" hint-placeholder-val="{{ false }}"><p id="err-lastName" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.lastName }}</p></sc-if>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-email" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Email <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <input id="c-email" name="email" type="email" required autocomplete="email" inputMode="email" aria-required="true" aria-invalid="{{ inv.email }}" aria-describedby="err-email" onInput="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.email }}; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+            <sc-if value="{{ has.email }}" hint-placeholder-val="{{ false }}"><p id="err-email" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.email }}</p></sc-if>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-phone" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Phone / WhatsApp <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <input id="c-phone" name="phone" type="tel" required autocomplete="tel" inputMode="tel" aria-required="true" aria-invalid="{{ inv.phone }}" aria-describedby="err-phone" onInput="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.phone }}; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+            <sc-if value="{{ has.phone }}" hint-placeholder-val="{{ false }}"><p id="err-phone" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.phone }}</p></sc-if>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-location" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Where is the property? <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <div style="position:relative"><select id="c-location" name="location" required defaultValue="" aria-required="true" aria-invalid="{{ inv.location }}" aria-describedby="err-location" onChange="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 44px 16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.location }}; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+              <option value="" disabled>Please select</option>
+              <option value="Harbour Island">Harbour Island</option>
+              <option value="North Eleuthera">North Eleuthera</option>
+              <option value="Gregory Town">Gregory Town</option>
+              <option value="Hatchet Bay">Hatchet Bay</option>
+              <option value="Governors Harbour">Governors Harbour</option>
+              <option value="Palmetto Point">Palmetto Point</option>
+              <option value="Windermere Island">Windermere Island</option>
+              <option value="Rock Sound">Rock Sound</option>
+              <option value="Tarpum Bay">Tarpum Bay</option>
+              <option value="South Eleuthera">South Eleuthera</option>
+              <option value="Elsewhere in The Bahamas">Elsewhere in The Bahamas</option>
+            </select><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7A828C" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); pointer-events:none; stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg></div>
+            <sc-if value="{{ has.location }}" hint-placeholder-val="{{ false }}"><p id="err-location" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.location }}</p></sc-if>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-type" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">What are you looking to do? <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <div style="position:relative"><select id="c-type" name="projectType" required defaultValue="" aria-required="true" aria-invalid="{{ inv.projectType }}" aria-describedby="err-projectType" onChange="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 44px 16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.projectType }}; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+              <option value="" disabled>Please select</option>
+              <option value="New home construction">New home construction</option>
+              <option value="Renovation or remodel">Renovation or remodel</option>
+              <option value="Addition or extension">Addition or extension</option>
+              <option value="Swimming pool">Swimming pool</option>
+              <option value="Roof replacement">Roof replacement</option>
+              <option value="Dock or waterfront">Dock or waterfront</option>
+              <option value="Property management">Property management</option>
+              <option value="Something else">Something else</option>
+            </select><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7A828C" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); pointer-events:none; stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg></div>
+            <sc-if value="{{ has.projectType }}" hint-placeholder-val="{{ false }}"><p id="err-projectType" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.projectType }}</p></sc-if>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-start" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">When would you like to start?</label>
+            <div style="position:relative"><select id="c-start" name="startTiming" defaultValue="" style="width:100%; box-sizing:border-box; padding:16px 44px 16px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+              <option value="" disabled>Please select</option>
+              <option value="As soon as possible">As soon as possible</option>
+              <option value="Within 3 months">Within 3 months</option>
+              <option value="3–6 months">3–6 months</option>
+              <option value="6–12 months">6–12 months</option>
+              <option value="Just planning for now">Just planning for now</option>
+            </select><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7A828C" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); pointer-events:none; stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg></div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-drawings" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Do you have drawings yet?</label>
+            <div style="position:relative"><select id="c-drawings" name="drawings" defaultValue="" style="width:100%; box-sizing:border-box; padding:16px 44px 16px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+              <option value="" disabled>Please select</option>
+              <option value="Architect's drawings">Architect's drawings</option>
+              <option value="A sketch or rough plan">A sketch or rough plan</option>
+              <option value="Not yet">Not yet</option>
+              <option value="Not sure what I need">Not sure what I need</option>
+            </select><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7A828C" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); pointer-events:none; stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg></div>
+          </div>
+
+          <div style="grid-column:1 / -1; display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-budget" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Approximate budget <span style="font-weight:400; color:#7A828C">(optional)</span></label>
+            <div style="position:relative"><select id="c-budget" name="budget" defaultValue="" style="width:100%; box-sizing:border-box; padding:16px 44px 16px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 17px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+              <option value="" disabled>Please select</option>
+              <option value="Under $50,000">Under $50,000</option>
+              <option value="$50,000–$150,000">$50,000–$150,000</option>
+              <option value="$150,000–$500,000">$150,000–$500,000</option>
+              <option value="Over $500,000">Over $500,000</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7A828C" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); pointer-events:none; stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg></div>
+            <p style="margin:0; font:400 13px/1.5 Inter, system-ui, sans-serif; color:#7A828C">[CONFIRM — keep this field or remove it?]</p>
+          </div>
+
+          <div style="grid-column:1 / -1; display:flex; flex-direction:column; gap:8px; min-width:0">
+            <label for="c-message" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Tell us about the project <span aria-hidden="true" style="color:#C4302B">*</span></label>
+            <textarea id="c-message" name="message" rows="7" required aria-required="true" aria-invalid="{{ inv.message }}" aria-describedby="err-message" onInput="{{ clearErr }}" style="width:100%; box-sizing:border-box; padding:16px 14px; border:1.5px solid #DDE1E5; border-color: {{ bc.message }}; border-radius:2px; font:400 17px/1.55 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none"></textarea>
+            <sc-if value="{{ has.message }}" hint-placeholder-val="{{ false }}"><p id="err-message" role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.message }}</p></sc-if>
+          </div>
+
+          <div style="grid-column:1 / -1; display:flex; flex-direction:column; gap:10px; min-width:0">
+            <label for="c-files" style="font:700 15px Inter, system-ui, sans-serif; color:#101820">Drawings or photographs <span style="font-weight:400; color:#7A828C">(optional)</span></label>
+            <p style="margin:0; font:400 13px/1.5 Inter, system-ui, sans-serif; color:#7A828C">Accepted file types: pdf, doc, docx, jpg, png. Max file size 25 MB.</p>
+            <div onDragOver="{{ dragOver }}" onDragLeave="{{ dragLeave }}" onDrop="{{ dropFiles }}" style="min-height:130px; box-sizing:border-box; padding:24px; border:1.5px dashed #DDE1E5; border-color: {{ dropBorder }}; border-radius:2px; background: {{ dropBg }}; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; text-align:center; transition:background 200ms ease, border-color 200ms ease">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A828C" style="stroke-width:1.6px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+              <p style="margin:0; font:400 16px/1.5 Inter, system-ui, sans-serif; color:#3A3F47">Drag and drop here or</p>
+              <label for="c-files" style="font:700 16px/1.4 Manrope, Archivo, system-ui, sans-serif; color:#101820; text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:2px; cursor:pointer">Choose your files</label>
+              <input ref="{{ fileRef }}" id="c-files" name="files" type="file" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" onChange="{{ pickFiles }}" style="position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; pointer-events:none">
+            </div>
+            <sc-if value="{{ hasFiles }}" hint-placeholder-val="{{ false }}">
+              <ul aria-label="Selected files" style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px">
+                <sc-for list="{{ files }}" as="f" hint-placeholder-count="0">
+                  <li style="display:flex; justify-content:space-between; gap:16px; font:400 14px/1.5 Inter, system-ui, sans-serif; color:#3A3F47"><span style="min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">{{ f.name }}</span><span style="color:#7A828C; flex:none">{{ f.size }}</span></li>
+                </sc-for>
+              </ul>
+            </sc-if>
+            <sc-if value="{{ has.files }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">{{ err.files }}</p></sc-if>
+          </div>
+
+          <div aria-hidden="true" style="position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden">
+            <label for="c-website">Website</label>
+            <input id="c-website" name="company_website" type="text" tabIndex="-1" autocomplete="off">
+          </div>
+
+          <div style="grid-column:1 / -1; display:flex; flex-direction:column; gap:16px; margin-top:6px">
+            <button type="submit" disabled="{{ sending }}" style="width:100%; display:flex; align-items:center; justify-content:center; gap:12px; background:#10264A; color:#FFFFFF; padding:22px 32px; font:600 17px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer" style-hover="background:#0B4A8F">{{ submitLabel }}</button>
+            <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
+              <div role="alert" style="border:1.5px solid #C4302B; border-radius:2px; padding:16px 18px; display:flex; flex-direction:column; gap:6px">
+                <p style="margin:0; font:700 15px/1.4 Inter, system-ui, sans-serif; color:#C4302B">Your message didn't go through.</p>
+                <p style="margin:0; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#3A3F47">Please try again, or reach us directly at <a href="tel:+12424708131" style="color:#10264A; font-weight:600">(242) 470-8131</a> or <a href="{{ emailHref }}" style="color:#10264A; font-weight:600">{{ emailText }}</a>.</p>
+              </div>
+            </sc-if>
+            <p style="margin:0; font:400 14px/1.5 Inter, system-ui, sans-serif; color:#7A828C">We read every message ourselves. [CONFIRM — add a response-time commitment here, e.g. "You'll hear back within one business day." Only include it if you'll hold to it.]</p>
+          </div>
+        </form>
+      </sc-if>
+
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="background:#EFF2F4; padding:40px; display:flex; flex-direction:column; gap:12px">
+          <p style="margin:0; font:800 clamp(24px, 2.2vw, 30px)/1.15 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Thanks — we've got it.</p>
+          <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We'll be in touch shortly. If it's urgent, call <a href="tel:+12424708131" style="color:#10264A; font-weight:600; text-decoration:none">(242) 470-8131</a>.</p>
+        </div>
+      </sc-if>
+    </div>
+
+    <aside aria-label="Contact details" style="min-width:0; display:flex; flex-direction:column; gap:40px; padding-top: {{ asideTop }}">
+      <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
+        <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Call or text</p>
+        <a href="tel:+12424708131" style="font:800 clamp(32px, 2.8vw, 40px)/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none" style-hover="color:#0B4A8F">(242) 470-8131</a>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Wallace Sineus, Owner</p>
+      </div>
+      <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
+        <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">WhatsApp</p>
+        <p style="margin:0; font:400 15px/1.55 Inter, system-ui, sans-serif; color:#7A828C">[CONFIRM — publish a WhatsApp number? Most enquiries here arrive that way, so it's worth having. Delete this block if you'd rather not.]</p>
+      </div>
+      <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
+        <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Email</p>
+        <a href="{{ emailHref }}" style="font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">{{ emailText }}</a>
+      </div>
+      <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
+        <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Where we are</p>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Palmetto Point<br>Eleuthera, The Bahamas</p>
+      </div>
+      <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
+        <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Already a client?</p>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">If we're already building for you or managing your property, call or text and it comes straight to us — you don't need the form.</p>
+      </div>
+      <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
+        <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
+          <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Find us on</p>
+          <div style="display:flex; gap:12px; align-items:center">
+            <sc-for list="{{ socialLinks }}" as="s" hint-placeholder-count="0">
+              <a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.label }}" style="width:44px; height:44px; border-radius:50%; background:#EFF2F4; display:grid; place-items:center; font:600 12px Inter, system-ui, sans-serif; color:#10264A; text-decoration:none" style-hover="background:#10264A; color:#FFFFFF">{{ s.abbr }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+    </aside>
+  </div>
+</section>
+
+<!-- 3 WHAT HAPPENS NEXT -->
+<section id="next" data-screen-label="What happens next" style="background:#EFF2F4; padding:clamp(72px, 9vw, 140px) 24px">
+  <div data-reveal="1" style="max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:20px; text-align:center">
+      <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">After you send it</span>
+      <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">What happens next</h2>
+    </div>
+    <ol style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">01</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We get in touch to ask a few questions — usually by phone, sometimes by email</span></li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">02</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We come and walk the property with you, at no charge</span></li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">03</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">You get a written, line-item estimate separating materials from labour</span></li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">04</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We go through it with you and answer whatever comes up</span></li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">05</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">If you decide to build, we set a start date and begin ordering long-lead items</span></li>
+    </ol>
+    <p style="margin:0; text-align:center; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47; text-wrap:pretty">Nothing is committed until you say so, and there's no cost to you up to that point.</p>
+  </div>
+</section>
+
+<!-- 4 WHERE WE WORK -->
+<section id="service-area" data-screen-label="Where we work" style="padding:clamp(72px, 9vw, 140px) 0">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; flex-direction:column; gap:24px">
+      <div style="display:inline-flex; flex-direction:column; gap:12px; align-self:flex-start">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">Service area</span>
+        <span style="display:block; height:1px; width:100%; min-width:88px; background:#DDE1E5"></span>
+      </div>
+      <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Where we work</h2>
+      <p style="margin:0; max-width:720px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We're based in Palmetto Point and work the length of Eleuthera, plus Harbour Island and Windermere Island. If your site isn't listed here, call and ask — the answer is usually yes.</p>
+    </div>
+    <ul style="list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); column-gap:clamp(32px, 5vw, 80px); border-top:1px solid #DDE1E5">
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Harbour Island</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Palmetto Point</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">North Eleuthera</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Windermere Island</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Gregory Town</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Rock Sound</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Hatchet Bay</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Tarpum Bay</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Governors Harbour</li>
+      <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">South Eleuthera</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- 5 FOOTER (contact-details variant) -->
+<footer id="contact" data-screen-label="Footer" style="padding:clamp(72px, 8vw, 120px) 0 40px; border-top:1px solid #DDE1E5">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap">
+      <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color:#10264A; line-height:1">
+        <span style="font: 800 34px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+        <span style="font: 600 12px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:5px">construction</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(20px, 3vw, 48px)">
+        <p style="margin:0; font:800 clamp(22px, 2.4vw, 34px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Built Right, Built to Last.</p>
+        <button type="button" aria-label="Scroll to top" onClick="{{ scrollTop }}" style="width:64px; height:64px; flex:none; background:#10264A; border:none; color:#FFFFFF; display:grid; place-items:center; cursor:pointer; border-radius:2px" style-hover="background:#0B4A8F"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"></path></svg></button>
+      </div>
+    </div>
+    <div style="height:1px; background:#DDE1E5"></div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:clamp(40px, 5vw, 72px)">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Contact</h3>
+        <a href="tel:+12424708131" style="font:800 clamp(30px, 3vw, 44px)/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none">(242) 470-8131</a>
+        <a href="{{ emailHref }}" style="font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">{{ emailText }}</a>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Palmetto Point<br>Eleuthera, The Bahamas</p>
+      </div>
+      <nav aria-label="Footer" style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Links</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px">
+          <li><a href="/services" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
+          <li><a href="/projects" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
+          <li><a href="/process" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
+          <li><a href="/about" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
+          <li><a href="/contact" aria-current="page" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
+          <li><a href="/privacy" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Get in touch</h3>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Call or text <a href="tel:+12424708131" style="color:#10264A; font-weight:600; text-decoration:none">(242) 470-8131</a>, email <a href="{{ emailHref }}" style="color:#10264A; font-weight:600; text-decoration:none">{{ emailText }}</a>, or use the <a href="#estimate" style="color:#10264A; font-weight:600; text-decoration:none">estimate form</a> above.</p>
+        <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
+            <p style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Find us on</p>
+            <div style="display:flex; gap:12px; align-items:center">
+              <sc-for list="{{ socialLinks }}" as="s" hint-placeholder-count="0">
+                <a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.label }}" style="width:44px; height:44px; border-radius:50%; background:#EFF2F4; display:grid; place-items:center; font:600 12px Inter, system-ui, sans-serif; color:#10264A; text-decoration:none" style-hover="background:#10264A; color:#FFFFFF">{{ s.abbr }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div style="height:1px; background:#DDE1E5"></div>
+    <p style="margin:0; text-align:center; font:400 13px Inter, system-ui, sans-serif; color:#7A828C">© 2026 ODS Construction. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FIXED BADGE -->
+<sc-if value="{{ showBadge }}" hint-placeholder-val="{{ true }}">
+  <a href="#estimate" aria-label="Request an estimate" style="position:fixed; right:32px; bottom:32px; z-index:45; width:120px; height:120px; border-radius:50%; background:#10264A; color:#FFFFFF; display:grid; place-items:center; text-decoration:none; box-shadow:0 8px 24px rgba(16,38,74,0.22), 0 2px 6px rgba(16,38,74,0.12); transition:box-shadow 300ms ease, background 300ms ease" style-hover="background:#0B4A8F; box-shadow:0 14px 32px rgba(16,38,74,0.3), 0 2px 6px rgba(16,38,74,0.12)">
+    <svg ref="{{ ringRef }}" viewBox="0 0 120 120" width="120" height="120" style="position:absolute; inset:0; will-change:transform" aria-hidden="true">
+      <defs><path id="ods-badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"></path></defs>
+      <text fill="#FFFFFF" style="font:600 8.5px Inter, system-ui, sans-serif; letter-spacing:0.14em"><textPath href="#ods-badge-circle" textLength="286" lengthAdjust="spacing">REQUEST AN ESTIMATE · REQUEST AN ESTIMATE ·</textPath></text>
+    </svg>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round; position:relative" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg>
+  </a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;formEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;[CONFIRM]&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Form&quot;},&quot;showBadge&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;},&quot;facebookUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;}}">
+class Component extends DCLogic {
+  state = {
+    emailHref: '#contact',
+    emailText: 'Email us',
+    menuOpen: false,
+    scrolled: false,
+    vw: typeof window !== 'undefined' ? window.innerWidth : 1440,
+    errors: {},
+    status: 'idle',
+    dragOver: false,
+    files: [],
+  };
+
+  ringRef = React.createRef();
+  bandRef = React.createRef();
+  formRef = React.createRef();
+  fileRef = React.createRef();
+  _ring = { target: 0, current: 0, raf: 0 };
+  _pending = [];
+
+  required = {
+    firstName: 'Please enter your first name.',
+    lastName: 'Please enter your last name.',
+    email: 'Please enter your email address.',
+    phone: 'Please enter a phone or WhatsApp number.',
+    location: 'Please tell us where the property is.',
+    projectType: 'Please tell us what you are looking to do.',
+    message: 'Please tell us a little about the project.',
+  };
+
+  _tickRing = () => {
+    const r = this._ring;
+    r.current += (r.target - r.current) * 0.12;
+    if (this.ringRef.current) this.ringRef.current.style.transform = 'rotate(' + r.current.toFixed(3) + 'deg)';
+    if (Math.abs(r.target - r.current) > 0.02) r.raf = requestAnimationFrame(this._tickRing);
+    else { r.current = r.target; r.raf = 0; }
+  };
+
+  componentDidMount() {
+    const addr = ['info', 'odsconstruction', 'com'].reduce((a, p, i) => a + (i === 1 ? '@' : i === 2 ? '.' : '') + p, '');
+    this.setState({ emailHref: 'mai' + 'lto:' + addr, emailText: addr });
+    this._reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._onResize = () => this.setState({ vw: window.innerWidth });
+    this._onScroll = () => {
+      const band = this.bandRef.current;
+      const threshold = band ? Math.max(band.offsetHeight - 88, 40) : 300;
+      const s = window.scrollY > threshold;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+      if (!this._reduceMotion) {
+        this._ring.target = window.scrollY * 0.15;
+        if (!this._ring.raf) this._ring.raf = requestAnimationFrame(this._tickRing);
+      }
+    };
+    window.addEventListener('resize', this._onResize);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    if ((this.props.revealAnimations ?? true) && 'IntersectionObserver' in window) {
+      const els = Array.from(document.querySelectorAll('[data-reveal]'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.08 });
+      els.forEach((el) => {
+        if (el.getBoundingClientRect().top <= window.innerHeight) return;
+        el.style.transition = 'opacity 500ms ease, transform 500ms ease';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        io.observe(el);
+      });
+      this._io = io;
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+    if (this._ring.raf) cancelAnimationFrame(this._ring.raf);
+  }
+
+  _fmtSize(n) {
+    if (n < 1024 * 1024) return Math.max(1, Math.round(n / 1024)) + ' KB';
+    return (n / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  _addFiles(list) {
+    const ok = /\.(pdf|doc|docx|jpg|jpeg|png)$/i;
+    const max = 25 * 1024 * 1024;
+    const errs = { ...this.state.errors };
+    delete errs.files;
+    const accepted = [];
+    Array.from(list || []).forEach((f) => {
+      if (!ok.test(f.name)) errs.files = f.name + ' is not an accepted file type.';
+      else if (f.size > max) errs.files = f.name + ' is larger than 25 MB.';
+      else accepted.push(f);
+    });
+    this._pending = this._pending.concat(accepted);
+    this.setState({ files: this._pending.map((f) => ({ name: f.name, size: this._fmtSize(f.size) })), errors: errs, dragOver: false });
+  }
+
+  _validate(fd) {
+    const errs = {};
+    Object.keys(this.required).forEach((k) => {
+      if (!String(fd.get(k) || '').trim()) errs[k] = this.required[k];
+    });
+    const email = String(fd.get('email') || '').trim();
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = 'That email address doesn\u2019t look right.';
+    const phone = String(fd.get('phone') || '').replace(/\D/g, '');
+    if (phone && phone.length < 7) errs.phone = 'Please enter a full phone number.';
+    return errs;
+  }
+
+  async _send(fd) {
+    const endpoint = this.props.formEndpoint ?? '[CONFIRM]';
+    if (!/^https?:\/\//.test(endpoint)) {
+      await new Promise((r) => setTimeout(r, 700));
+      return true;
+    }
+    const res = await fetch(endpoint, { method: 'POST', body: fd });
+    return res.ok;
+  }
+
+  renderVals() {
+    const { emailHref, emailText, menuOpen, scrolled, vw, errors, status, dragOver, files } = this.state;
+    const isDesktopNav = vw >= 1024;
+    const d = isDesktopNav;
+    const onNavy = !scrolled && !menuOpen;
+    const keys = ['firstName', 'lastName', 'email', 'phone', 'location', 'projectType', 'message', 'files'];
+    const err = {}, bc = {}, has = {}, inv = {};
+    keys.forEach((k) => {
+      err[k] = errors[k] || '';
+      has[k] = !!errors[k];
+      inv[k] = !!errors[k];
+      bc[k] = errors[k] ? '#C4302B' : '#DDE1E5';
+    });
+    return {
+      emailHref,
+      emailText,
+      isDesktopNav,
+      isMobileNav: !isDesktopNav,
+      menuOpen,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      headerBg: onNavy ? 'rgba(255,255,255,0)' : '#FFFFFF',
+      navColor: onNavy ? '#FFFFFF' : '#101820',
+      brandColor: onNavy ? '#FFFFFF' : '#10264A',
+      headerShadow: scrolled ? '0 1px 0 #DDE1E5' : '0 1px 0 rgba(221,225,229,0)',
+      bandRef: this.bandRef,
+      ringRef: this.ringRef,
+      formRef: this.formRef,
+      fileRef: this.fileRef,
+      splitCols: d ? '1fr 1fr' : '1fr',
+      headerImgRatio: d ? 'auto' : '16/9',
+      mainCols: d ? 'minmax(0, 58fr) minmax(0, 30fr)' : '1fr',
+      asideTop: d ? '14px' : '0',
+      fieldCols: vw >= 640 ? '1fr 1fr' : '1fr',
+      err, bc, has, inv,
+      showForm: status !== 'sent',
+      sent: status === 'sent',
+      failed: status === 'failed',
+      sending: status === 'sending',
+      submitLabel: status === 'sending' ? 'Sending…' : 'Send request',
+      files,
+      hasFiles: files.length > 0,
+      dropBorder: dragOver ? '#10264A' : '#DDE1E5',
+      dropBg: dragOver ? 'rgba(16,38,74,0.06)' : '#EFF2F4',
+      dragOver: (e) => { e.preventDefault(); if (!dragOver) this.setState({ dragOver: true }); },
+      dragLeave: () => this.setState({ dragOver: false }),
+      dropFiles: (e) => { e.preventDefault(); this._addFiles(e.dataTransfer && e.dataTransfer.files); },
+      pickFiles: (e) => { this._addFiles(e.target.files); e.target.value = ''; },
+      clearErr: (e) => {
+        const k = e.target.name;
+        if (this.state.errors[k]) this.setState((s) => { const n = { ...s.errors }; delete n[k]; return { errors: n }; });
+      },
+      submitForm: async (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const fd = new FormData(form);
+        if (String(fd.get('company_website') || '').trim()) { this.setState({ status: 'sent' }); return; }
+        const errs = this._validate(fd);
+        if (Object.keys(errs).length) {
+          this.setState({ errors: errs, status: 'idle' }, () => {
+            const first = Object.keys(errs).find((k) => k !== 'files');
+            const el = first && form.querySelector('[name="' + first + '"]');
+            if (el) el.focus();
+          });
+          return;
+        }
+        fd.delete('files');
+        this._pending.forEach((f) => fd.append('files', f, f.name));
+        this.setState({ status: 'sending', errors: {} });
+        try {
+          const ok = await this._send(fd);
+          this.setState({ status: ok ? 'sent' : 'failed' });
+        } catch (_) {
+          this.setState({ status: 'failed' });
+        }
+      },
+      showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen && status !== 'sent',
+      socialLinks: [
+        { href: this.props.instagramUrl, label: 'ODS Construction on Instagram', abbr: 'IG' },
+        { href: this.props.facebookUrl, label: 'ODS Construction on Facebook', abbr: 'FB' },
+      ].filter((s) => typeof s.href === 'string' && /^https?:\/\//.test(s.href.trim())),
+      showSocialRow: [this.props.instagramUrl, this.props.facebookUrl].some((u) => typeof u === 'string' && /^https?:\/\//.test(u.trim())),
+      scrollTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+    };
+  }
+}
+</script>
+</body>
+</html>

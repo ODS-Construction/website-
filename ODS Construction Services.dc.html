@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Services — Custom Homes, Renovations, Additions &amp; Pools | ODS Construction Eleuthera</title>
+<meta name="description" content="New home construction, renovations, additions, swimming pools, roofing and property management in Eleuthera, The Bahamas. Owner-led, 26 years on the island.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"GeneralContractor","@id":"https://odsconstruction.com/#organization","url":"https://odsconstruction.com","email":"info@odsconstruction.com","name":"ODS Construction","slogan":"Built Right, Built to Last.","telephone":"+1-242-470-8131","address":{"@type":"PostalAddress","addressLocality":"Palmetto Point","addressRegion":"Eleuthera","addressCountry":"BS"}},{"@type":"Service","name":"New Home Construction","serviceType":"Custom home construction","provider":{"@id":"https://odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://odsconstruction.com/services#new-home-construction"},{"@type":"Service","name":"Renovations & Remodels","serviceType":"Residential renovation","provider":{"@id":"https://odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://odsconstruction.com/services#renovations"},{"@type":"Service","name":"Additions & Extensions","serviceType":"Home additions","provider":{"@id":"https://odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://odsconstruction.com/services#additions"},{"@type":"Service","name":"Swimming Pool Construction","serviceType":"Concrete pool construction","provider":{"@id":"https://odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://odsconstruction.com/services#pools"},{"@type":"Service","name":"Property Management","serviceType":"Residential property management","provider":{"@id":"https://odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://odsconstruction.com/services#property-management"},{"@type":"Service","name":"Roofing, Docks & Specialty Trades","serviceType":"Roofing, docks and specialty trades","provider":{"@id":"https://odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://odsconstruction.com/services#specialty"}]}</script>
+<style>
+html { scroll-behavior: smooth; }
+html, body, #dc-root, .sc-host { height: auto; min-height: 100%; }
+body { margin: 0; background: #FFFFFF; color: #3A3F47; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #10264A; }
+a:hover { color: #0B4A8F; }
+:focus-visible { outline: 2px solid #0B4A8F; outline-offset: 3px; }
+input::placeholder, textarea::placeholder { color: #7A828C; }
+</style>
+</helmet>
+
+<header style="position:sticky; top:0; z-index:40; background: {{ headerBg }}; color: {{ navColor }}; box-shadow: {{ headerShadow }}; transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease">
+  <div style="max-width:1240px; margin:0 auto; padding:0 24px; height:88px; display:flex; align-items:center; justify-content:space-between; gap:32px">
+    <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color: {{ brandColor }}; line-height:1; transition:color 200ms ease">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+      <span style="font: 600 11px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:4px">construction</span>
+    </a>
+    <sc-if value="{{ isDesktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex; align-items:center; gap:36px; height:88px">
+        <a href="/services" aria-current="page" style="position:relative; display:flex; align-items:center; height:88px; font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Services<span aria-hidden="true" style="position:absolute; left:0; right:0; bottom:0; height:3px; background:currentColor"></span></a>
+        <a href="/projects" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Projects</a>
+        <a href="/process" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Process</a>
+        <a href="/about" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">About</a>
+        <a href="/contact" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Contact</a>
+        <button type="button" aria-label="Search" style="background:none; border:none; padding:8px; margin-left:8px; cursor:pointer; color:inherit; display:flex">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" style="stroke-width:1.6px; stroke-linecap:round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"></circle><line x1="13" y1="13" x2="18" y2="18"></line></svg>
+        </button>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobileNav }}" hint-placeholder-val="{{ false }}">
+      <button type="button" aria-label="Open menu" aria-expanded="{{ menuOpen }}" onClick="{{ toggleMenu }}" style="background:none; border:none; padding:10px; cursor:pointer; color:inherit; display:flex; flex-direction:column; gap:6px; min-width:44px; min-height:44px; justify-content:center">
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Menu" style="position:fixed; inset:0; z-index:60; background:#FFFFFF; display:flex; flex-direction:column; padding:24px">
+    <div style="display:flex; justify-content:space-between; align-items:center; height:40px">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em; color:#10264A">ODS</span>
+      <button type="button" aria-label="Close menu" onClick="{{ toggleMenu }}" style="background:none; border:none; cursor:pointer; color:#101820; font:600 15px Inter, system-ui, sans-serif; min-width:44px; min-height:44px">Close</button>
+    </div>
+    <nav aria-label="Primary" style="display:flex; flex-direction:column; gap:8px; margin-top:48px">
+      <a href="/services" aria-current="page" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Services</a>
+      <a href="/projects" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Projects</a>
+      <a href="/process" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Process</a>
+      <a href="/about" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">About</a>
+      <a href="/contact" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Contact</a>
+    </nav>
+    <a href="#contact" onClick="{{ toggleMenu }}" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none">Request an estimate</a>
+  </div>
+</sc-if>
+
+<main>
+
+<!-- 1 PAGE HEADER (split) -->
+<section id="top" ref="{{ bandRef }}" data-screen-label="Page header" style="margin-top:-88px; padding-top:88px; background:#10264A">
+  <div style="display:grid; grid-template-columns: {{ splitCols }}; min-height:max(480px, 55vh)">
+    <div style="display:flex; flex-direction:column; justify-content:center; gap:28px; padding:clamp(64px, 8vw, 96px) clamp(32px, 5vw, 80px) clamp(64px, 8vw, 96px) max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+      <h1 style="margin:0; font:800 clamp(40px, 5.5vw, 76px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF">Our Services</h1>
+      <p style="margin:0; max-width:460px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">ODS Construction builds and maintains homes across Eleuthera — new construction, renovations, additions, pools, roofing and property management, carried by one contractor from the first site walk to the final walkthrough.</p>
+    </div>
+    <div style="position:relative; min-height:0; overflow:hidden; aspect-ratio: {{ headerImgRatio }}">
+      <div style="position:absolute; inset:0"><image-slot id="services-header" shape="rect" placeholder="services-header.jpg — 1400×1100"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 CENTRED STATEMENT -->
+<section data-screen-label="Statement" style="position:relative; overflow:hidden; padding:clamp(88px, 11vw, 160px) 24px; display:flex; justify-content:center">
+  <div aria-hidden="true" style="position:absolute; left:-140px; top:50%; transform:translateY(-50%); font:800 520px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.05em; color:transparent; -webkit-text-stroke:1.5px #DDE1E5; opacity:0.35; pointer-events:none; user-select:none; white-space:nowrap">ODS</div>
+  <p data-reveal="1" style="position:relative; margin:0; max-width:800px; text-align:center; font:800 clamp(26px, 2.8vw, 40px)/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Building on an island rewards the contractor who plans for it — and punishes the one who doesn't.</p>
+</section>
+
+<!-- 3 BLOCK 01 · New Home Construction (text left / image right) -->
+<section id="new-home-construction" data-screen-label="01 New Home Construction" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsTextLeft }}; align-items:center; row-gap:40px">
+    <div style="order: {{ imgRightOrder }}; min-width:0">
+      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
+        <image-slot id="service-new-construction" shape="rect" placeholder="service-new-construction.jpg — 1400×1000"></image-slot>
+      </div>
+      <p style="margin:12px 24px 0 0; padding-left: {{ captionPadLeft }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">New home construction, Eleuthera</p>
+    </div>
+    <div style="order: {{ textLeftOrder }}; min-width:0; padding:0 clamp(24px, 5vw, 80px) 0 max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+      <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
+        <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">New Home Construction</h2>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">A custom home is the longest relationship you'll have with a contractor. We take one from a cleared site through to the day you turn the key — structure, envelope, systems and finishes — built for the conditions this island actually has rather than the ones a mainland drawing assumes.</p>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1240px; margin:96px auto 0; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px">
+    <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ accNew }}" as="r" hint-placeholder-count="4">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 BLOCK 02 · Renovations (image left / text right) -->
+<section id="renovations" data-screen-label="02 Renovations" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsImgLeft }}; align-items:center; row-gap:40px">
+    <div style="min-width:0">
+      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
+        <image-slot id="service-renovations" shape="rect" placeholder="service-renovations.jpg — 1400×1000"></image-slot>
+      </div>
+      <p style="margin:12px 0 0 24px; padding-right: {{ captionPadRight }}; text-align: {{ captionAlignLeftImg }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Interior renovation in progress</p>
+    </div>
+    <div style="min-width:0; padding:0 max(24px, calc((100vw - 1240px) / 2)) 0 clamp(24px, 5vw, 80px); box-sizing:border-box">
+      <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
+        <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Renovations &amp; Remodels</h2>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Renovation is harder than new construction, because you're building around something that already exists and doesn't always match its drawings. We survey and photograph everything before the first wall opens, so what we find inside becomes a documented change with a number attached — not a conversation at the end of the job about why the bill grew.</p>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1240px; margin:96px auto 0; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px">
+    <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ accReno }}" as="r" hint-placeholder-count="3">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 BLOCK 03 · Additions (text left / image right) -->
+<section id="additions" data-screen-label="03 Additions" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsTextLeft }}; align-items:center; row-gap:40px">
+    <div style="order: {{ imgRightOrder }}; min-width:0">
+      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
+        <image-slot id="service-additions" shape="rect" placeholder="service-additions.jpg — 1400×1000"></image-slot>
+      </div>
+      <p style="margin:12px 24px 0 0; padding-left: {{ captionPadLeft }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Second-storey addition, central Eleuthera</p>
+    </div>
+    <div style="order: {{ textLeftOrder }}; min-width:0; padding:0 clamp(24px, 5vw, 80px) 0 max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+      <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
+        <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Additions &amp; Extensions</h2>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">An addition done well doesn't read as an addition. That means matching the roofline, the wall finishes and the details of the existing house closely enough that a visitor can't tell where the old building stops — and tying the new structure back into the old one properly, so it behaves as one building in a storm rather than two.</p>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1240px; margin:96px auto 0; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px">
+    <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ accAdd }}" as="r" hint-placeholder-count="3">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 6 BLOCK 04 · Pools (image left / text right) -->
+<section id="pools" data-screen-label="04 Pools" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsImgLeft }}; align-items:center; row-gap:40px">
+    <div style="min-width:0">
+      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
+        <image-slot id="service-pools" shape="rect" placeholder="service-pools.jpg — 1400×1000"></image-slot>
+      </div>
+      <p style="margin:12px 0 0 24px; padding-right: {{ captionPadRight }}; text-align: {{ captionAlignLeftImg }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Concrete pool construction, Governors Harbour</p>
+    </div>
+    <div style="min-width:0; padding:0 max(24px, calc((100vw - 1240px) / 2)) 0 clamp(24px, 5vw, 80px); box-sizing:border-box">
+      <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
+        <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Swimming Pool Construction</h2>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We build concrete pools — excavated, steel-reinforced and formed on site, not dropped in as a shell. That's the right way to build here, because a concrete pool can be shaped to the site rather than the site being reshaped for it, and because it will still be there in thirty years.</p>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1240px; margin:96px auto 0; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px">
+    <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ accPool }}" as="r" hint-placeholder-count="3">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 7 BLOCK 05 · Property Management (text left / image right) -->
+<section id="property-management" data-screen-label="05 Property Management" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsTextLeft }}; align-items:center; row-gap:40px">
+    <div style="order: {{ imgRightOrder }}; min-width:0">
+      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
+        <image-slot id="service-property-management" shape="rect" placeholder="service-property-management.jpg — 1400×1000"></image-slot>
+      </div>
+      <p style="margin:12px 24px 0 0; padding-left: {{ captionPadLeft }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Managed property, Eleuthera</p>
+    </div>
+    <div style="order: {{ textLeftOrder }}; min-width:0; padding:0 clamp(24px, 5vw, 80px) 0 max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+      <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
+        <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Property Management</h2>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">A house that sits empty for eight months a year needs someone looking after it. Salt, damp, storms and vegetation don't take the off-season off, and the difference between a small repair and a large one is usually just how long it went unnoticed. We manage properties for owners who aren't here, on a fixed monthly fee with any work billed separately.</p>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1240px; margin:96px auto 0; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px">
+    <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ accProp }}" as="r" hint-placeholder-count="3">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 BLOCK 06 · Specialty (image left / text right, with button) -->
+<section id="specialty" data-screen-label="06 Roofing, Docks & Specialty" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsImgLeft }}; align-items:center; row-gap:40px">
+    <div style="min-width:0">
+      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
+        <image-slot id="service-specialty" shape="rect" placeholder="service-specialty.jpg — 1400×1000"></image-slot>
+      </div>
+      <p style="margin:12px 0 0 24px; padding-right: {{ captionPadRight }}; text-align: {{ captionAlignLeftImg }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Standing seam metal roof replacement</p>
+    </div>
+    <div style="min-width:0; padding:0 max(24px, calc((100vw - 1240px) / 2)) 0 clamp(24px, 5vw, 80px); box-sizing:border-box">
+      <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px; align-items:flex-start">
+        <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Roofing, Docks &amp; Specialty Trades</h2>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Not everything fits neatly into a category. We do full roof tear-off and replacement, including standing seam metal systems specified for hurricane exposure. We build private docks and waterfront structures designed for the site's exposure and water depth. And we self-perform tile and stone, countertop fabrication and finishing, cabinetry installation and mechanical work — trades most contractors hand to someone else.</p>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">If what you need isn't listed anywhere on this page, call and ask. We'll tell you honestly whether it's work we should be doing.</p>
+        <a href="#contact" style="display:inline-flex; align-items:center; gap:12px; background:transparent; color:#10264A; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none; border:1.5px solid #10264A; margin-top:4px" style-hover="background:#10264A; color:#FFFFFF">Talk to us about your project <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 WHAT EVERY JOB INCLUDES -->
+<section id="as-standard" data-screen-label="As standard" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div data-reveal="1" style="max-width:900px; margin:0 auto; box-sizing:border-box; padding:0 24px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:20px; text-align:center">
+      <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">As standard</span>
+      <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">What comes with every job</h2>
+    </div>
+    <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">A written, line-item estimate separating materials from labour</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">The full landed cost of imported materials — freight, duty and VAT — carried from the start</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">A named point of contact from first walk to final handover</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">Regular progress photographs, whether or not you're on the island</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">Any change documented and priced before the work is done</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">A punch-list walkthrough before we call it finished</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">Handover documentation and equipment manuals</li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#7A828C; text-wrap:pretty">[CONFIRM — do you offer a stated warranty period? If yes, add it here. If not, delete this line.]</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 10 WHAT WE DON'T TAKE ON -->
+<section id="not-for-us" data-screen-label="What we don't take on" style="background:#EFF2F4; padding:clamp(72px, 7vw, 100px) 24px">
+  <div data-reveal="1" style="max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:28px; text-align:center">
+    <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">What we don't take on</h2>
+    <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47; text-wrap:pretty">We'd rather tell you now than three weeks in. We don't do architectural design or engineering — we work from your architect's drawings, and we'll recommend people if you don't have one yet. We don't take on work outside The Bahamas. And we'll turn down a job if the timeline isn't realistic or if we're already carrying more than we can supervise properly, because taking it anyway is how a contractor ends up doing bad work on two sites instead of good work on one.</p>
+  </div>
+</section>
+
+<!-- 11 FINAL CTA -->
+<section data-screen-label="Final CTA" style="position:relative; background:#10264A; overflow:hidden">
+  <div aria-hidden="true" style="position:absolute; inset:0; opacity:0.08; background-image:linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size:96px 96px; pointer-events:none"></div>
+  <svg aria-hidden="true" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax meet" style="position:absolute; left:0; right:0; bottom:0; width:100%; height:100%; opacity:0.08; pointer-events:none" fill="none" stroke="#FFFFFF">
+    <line x1="0" y1="300" x2="1200" y2="300" style="stroke-width:1.5px"></line>
+    <path d="M360 300 L390 380 L810 380 L840 300" style="stroke-width:1.5px"></path>
+    <line x1="380" y1="320" x2="820" y2="320" style="stroke-width:1px; stroke-dasharray:6 6"></line>
+    <rect x="880" y="240" width="120" height="60" style="stroke-width:1.5px"></rect>
+    <path d="M870 240 L940 180 L1010 240" style="stroke-width:1.5px"></path>
+  </svg>
+  <div style="position:relative; max-width:1240px; margin:0 auto; box-sizing:border-box; padding:clamp(96px, 12vw, 180px) clamp(24px, calc((100vw - 1280px) * 1000), 180px) clamp(96px, 12vw, 180px) 24px; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap">
+    <div style="display:flex; flex-direction:column; gap:24px; max-width:640px">
+      <h2 style="margin:0; font:800 clamp(36px, 5vw, 72px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF; text-wrap:pretty">Not sure which of these you need?</h2>
+      <p style="margin:0; max-width:560px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">Tell us what you're thinking about and we'll walk the property with you. The site visit and the written estimate are free.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:20px">
+      <a href="#contact" style="display:inline-flex; align-items:center; gap:12px; background:transparent; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none; border:1.5px solid #FFFFFF" style-hover="background:#FFFFFF; color:#10264A">Request an estimate <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+      <a href="tel:+12424708131" style="font:500 16px/1.4 Inter, system-ui, sans-serif; color:#FFFFFF; text-decoration:underline; text-underline-offset:4px" style-hover="color:#FFFFFF; opacity:0.85">Or call (242) 470-8131</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 12 FOOTER -->
+<footer id="contact" data-screen-label="Footer" style="padding:clamp(72px, 8vw, 120px) 0 40px">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap">
+      <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color:#10264A; line-height:1">
+        <span style="font: 800 34px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+        <span style="font: 600 12px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:5px">construction</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(20px, 3vw, 48px)">
+        <p style="margin:0; font:800 clamp(22px, 2.4vw, 34px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Built Right, Built to Last.</p>
+        <button type="button" aria-label="Scroll to top" onClick="{{ scrollTop }}" style="width:64px; height:64px; flex:none; background:#10264A; border:none; color:#FFFFFF; display:grid; place-items:center; cursor:pointer; border-radius:2px" style-hover="background:#0B4A8F"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"></path></svg></button>
+      </div>
+    </div>
+    <div style="height:1px; background:#DDE1E5"></div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:clamp(40px, 5vw, 72px)">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Contact</h3>
+        <a href="tel:+12424708131" style="font:800 clamp(30px, 3vw, 44px)/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none">(242) 470-8131</a>
+        <a href="{{ emailHref }}" style="font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">{{ emailText }}</a>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Palmetto Point<br>Eleuthera, The Bahamas</p>
+      </div>
+      <nav aria-label="Footer" style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Links</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px">
+          <li><a href="/services" aria-current="page" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
+          <li><a href="/projects" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
+          <li><a href="/process" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
+          <li><a href="/about" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
+          <li><a href="/contact" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
+          <li><a href="/privacy" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Request an estimate</h3>
+        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitForm }}" aria-label="Request an estimate" style="display:flex; flex-direction:column; gap:12px">
+            <label for="f-name" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Name</label>
+            <input id="f-name" name="name" type="text" required placeholder="Name" autocomplete="name" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <label for="f-email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Email</label>
+            <input id="f-email" name="email" type="email" required placeholder="Email" autocomplete="email" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <label for="f-phone" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Phone</label>
+            <input id="f-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <label for="f-type" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Project type</label>
+            <select id="f-type" name="projectType" required defaultValue="" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:auto">
+              <option value="" disabled>Project type</option>
+              <option value="New Construction">New Construction</option>
+              <option value="Renovation">Renovation</option>
+              <option value="Addition">Addition</option>
+              <option value="Pool">Pool</option>
+              <option value="Roofing">Roofing</option>
+              <option value="Property Management">Property Management</option>
+              <option value="Other">Other</option>
+            </select>
+            <label for="f-message" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Message" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical"></textarea>
+            <button type="submit" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">Send request <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
+          </form>
+        </sc-if>
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div role="status" style="background:#EFF2F4; padding:32px; display:flex; flex-direction:column; gap:8px">
+            <p style="margin:0; font:800 22px/1.2 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Thank you — we've got your request.</p>
+            <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">We'll be in touch to arrange a site visit. For anything urgent, call (242) 470-8131.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
+            <p style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Find us on</p>
+            <div style="display:flex; gap:12px; align-items:center">
+              <sc-for list="{{ socialLinks }}" as="s" hint-placeholder-count="0">
+                <a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.label }}" style="width:44px; height:44px; border-radius:50%; background:#EFF2F4; display:grid; place-items:center; font:600 12px Inter, system-ui, sans-serif; color:#10264A; text-decoration:none" style-hover="background:#10264A; color:#FFFFFF">{{ s.abbr }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div style="height:1px; background:#DDE1E5"></div>
+    <p style="margin:0; text-align:center; font:400 13px Inter, system-ui, sans-serif; color:#7A828C">© 2026 ODS Construction. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FIXED BADGE -->
+<sc-if value="{{ showBadge }}" hint-placeholder-val="{{ true }}">
+  <a href="#contact" aria-label="Request an estimate" style="position:fixed; right:32px; bottom:32px; z-index:45; width:120px; height:120px; border-radius:50%; background:#10264A; color:#FFFFFF; display:grid; place-items:center; text-decoration:none; box-shadow:0 8px 24px rgba(16,38,74,0.22), 0 2px 6px rgba(16,38,74,0.12); transition:box-shadow 300ms ease, background 300ms ease" style-hover="background:#0B4A8F; box-shadow:0 14px 32px rgba(16,38,74,0.3), 0 2px 6px rgba(16,38,74,0.12)">
+    <svg ref="{{ ringRef }}" viewBox="0 0 120 120" width="120" height="120" style="position:absolute; inset:0; will-change:transform" aria-hidden="true">
+      <defs><path id="ods-badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"></path></defs>
+      <text fill="#FFFFFF" style="font:600 8.5px Inter, system-ui, sans-serif; letter-spacing:0.14em"><textPath href="#ods-badge-circle" textLength="286" lengthAdjust="spacing">REQUEST AN ESTIMATE · REQUEST AN ESTIMATE ·</textPath></text>
+    </svg>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round; position:relative" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg>
+  </a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showBadge&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;},&quot;facebookUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;}}">
+class Component extends DCLogic {
+  state = {
+    emailHref: '#contact',
+    emailText: 'Email us',
+    open: {},
+    menuOpen: false,
+    scrolled: false,
+    submitted: false,
+    vw: typeof window !== 'undefined' ? window.innerWidth : 1440,
+  };
+
+  acc = {
+    accNew: [
+      { t: "What's included", b: 'Site clearing, excavation and grading. Footings, foundations and slab. Reinforced concrete and block structure. Roof structure and covering. Windows, doors and building envelope. Plumbing, mechanical and electrical rough-in. Cistern, water storage and septic systems. Interior finishes — tile, carpentry, cabinetry, countertops and paint. Exterior works including driveways, walls and patios. Final commissioning, punch list and handover documentation.' },
+      { t: 'Detailed for weather and salt', b: "The structure, the roof connections and the openings all get detailed for hurricane exposure, because at some point they will be tested. Salt decides your concrete cover, your fixings, your hardware and your finishes — the wrong specification looks fine for two years and then doesn't. We specify for thirty." },
+      { t: "Water, power and the things there's no mains for", b: 'Most sites here run on cisterns and their own systems rather than a municipal connection. Water storage, septic and standby power get designed into the build from the start rather than added at the end, which is both cheaper and considerably tidier.' },
+      { t: 'What decides your schedule', b: 'Windows, doors, roofing and mechanical equipment are the items that set the programme — order them late and the whole job waits on a barge. We identify them at estimate stage and get them moving early through our South Florida suppliers.' },
+    ],
+    accReno: [
+      { t: "What's included", b: 'Kitchen renovation — cabinetry, countertops, appliances, plumbing and electrical. Bathroom renovation including full strip-out, waterproofing, tile and fixtures. Great room and living space remodels. Flooring replacement. Interior carpentry, built-ins and trim. Window and door replacement. Rewiring, re-plumbing and mechanical upgrades. Whole-house refits, phased or in one go.' },
+      { t: "Working while you're off-island", b: "A lot of our renovation work happens in houses the owner isn't living in, sometimes several thousand miles away. You get regular photographs, a clear record of what was found once things opened up, and a straight answer about what it means for the schedule and the cost — so you're never approving something you can't see." },
+      { t: "Working while you're living in it", b: "Where the house is occupied, we phase the work so you keep a functioning kitchen or bathroom for as much of it as possible, and we clean the site at the end of every day. It's your home while we're in it." },
+    ],
+    accAdd: [
+      { t: "What's included", b: 'New wings and ground-floor extensions. Second-storey additions. Guest cottages and detached structures. Covered porches, verandas and outdoor living space. Garage and workshop buildings. Structural alterations to the existing house. Extending the existing mechanical, plumbing and electrical systems. Roofline and finish matching to the original building.' },
+      { t: 'Can the existing house carry it?', b: "Foundations, walls and roof framing built for one storey don't automatically take a second. We investigate that before pricing rather than after, and if an engineer needs to be involved we'll tell you at that point — not halfway through." },
+      { t: "Matching what's already there", b: "Block, render, tile and roofing that went on twenty years ago may not be available now. We identify substitutes early and show them to you before they're ordered, rather than once they're on the wall." },
+    ],
+    accPool: [
+      { t: "What's included", b: 'Site assessment, setting out and excavation. Steel reinforcement and structural concrete shell. Pool plumbing, returns, skimmers and main drains. Filtration, pumps, heating and sanitising equipment. Equipment pad, plant enclosure and electrical supply. Waterline tile, coping and interior finish. Surrounding decking, patios and drainage. Water features, lighting and spa additions. Commissioning, water balancing and owner handover.' },
+      { t: 'Rock is the variable that decides the price', b: "Most of this island is limestone under a shallow layer of soil, so pool excavation is very often rock excavation. It's the single biggest variable in what a pool costs here, and the one we look at hardest before giving you a number — because a price that assumes soft dig and finds rock is a price that changes." },
+      { t: 'Equipment you can actually service', b: 'We size the equipment to your household rather than to a catalogue, and we lay out the plant so it can be worked on. Pool equipment is an imported, long-lead item; if something fails and the replacement is six weeks out, you want the swap to take an afternoon.' },
+    ],
+    accProp: [
+      { t: "What's included", b: 'Scheduled grounds and landscaping maintenance. Regular building checks covering roof, envelope, openings and damp. Pool and equipment servicing. Mechanical, plumbing and electrical system checks. Hurricane preparation — shutters, securing and shutdown. Post-storm inspection and damage reporting. Supervision of other contractors on your behalf. Arrival preparation before you or your guests come in. Written reports with photographs.' },
+      { t: "How you'll hear from us", b: "Reports come with photographs, so you can see what we're describing rather than take our word for it. Anything beyond routine maintenance gets quoted and approved by you before we touch it — you should never be surprised by an invoice for work you didn't authorise." },
+      { t: 'Why a builder rather than a management company', b: 'When something does need fixing, the people who found it are the people who can repair it properly, with the same crew and the same standard as the rest of our work.' },
+    ],
+  };
+
+  ringRef = React.createRef();
+  bandRef = React.createRef();
+  _ring = { target: 0, current: 0, raf: 0 };
+
+  _tickRing = () => {
+    const r = this._ring;
+    r.current += (r.target - r.current) * 0.12;
+    if (this.ringRef.current) this.ringRef.current.style.transform = 'rotate(' + r.current.toFixed(3) + 'deg)';
+    if (Math.abs(r.target - r.current) > 0.02) r.raf = requestAnimationFrame(this._tickRing);
+    else { r.current = r.target; r.raf = 0; }
+  };
+
+  componentDidMount() {
+    const addr = ['info', 'odsconstruction', 'com'].reduce((a, p, i) => a + (i === 1 ? '@' : i === 2 ? '.' : '') + p, '');
+    this.setState({ emailHref: 'mai' + 'lto:' + addr, emailText: addr });
+    this._reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._onResize = () => this.setState({ vw: window.innerWidth });
+    this._onScroll = () => {
+      const band = this.bandRef.current;
+      const threshold = band ? Math.max(band.offsetHeight - 88, 40) : 300;
+      const s = window.scrollY > threshold;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+      if (!this._reduceMotion) {
+        this._ring.target = window.scrollY * 0.15;
+        if (!this._ring.raf) this._ring.raf = requestAnimationFrame(this._tickRing);
+      }
+    };
+    window.addEventListener('resize', this._onResize);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    if ((this.props.revealAnimations ?? true) && 'IntersectionObserver' in window) {
+      const els = Array.from(document.querySelectorAll('[data-reveal]'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.08 });
+      els.forEach((el) => {
+        if (el.getBoundingClientRect().top <= window.innerHeight) return;
+        el.style.transition = 'opacity 500ms ease, transform 500ms ease';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        io.observe(el);
+      });
+      this._io = io;
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+    if (this._ring.raf) cancelAnimationFrame(this._ring.raf);
+  }
+
+  _rows(key) {
+    return this.acc[key].map((r, i) => {
+      const id = key + '-' + i;
+      const open = !!this.state.open[id];
+      return {
+        ...r, id, open,
+        rows: open ? '1fr' : '0fr',
+        rot: open ? 'rotate(45deg)' : 'rotate(0deg)',
+        toggle: () => this.setState((s) => ({ open: { ...s.open, [id]: !s.open[id] } })),
+      };
+    });
+  }
+
+  renderVals() {
+    const { emailHref, emailText, menuOpen, scrolled, submitted, vw } = this.state;
+    const isDesktopNav = vw >= 1024;
+    const d = isDesktopNav;
+    const onNavy = !scrolled && !menuOpen;
+    return {
+      emailHref,
+      emailText,
+      isDesktopNav,
+      isMobileNav: !isDesktopNav,
+      menuOpen,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      headerBg: onNavy ? 'rgba(255,255,255,0)' : '#FFFFFF',
+      navColor: onNavy ? '#FFFFFF' : '#101820',
+      brandColor: onNavy ? '#FFFFFF' : '#10264A',
+      headerShadow: scrolled ? '0 1px 0 #DDE1E5' : '0 1px 0 rgba(221,225,229,0)',
+      bandRef: this.bandRef,
+      ringRef: this.ringRef,
+      splitCols: d ? '1fr 1fr' : '1fr',
+      headerImgRatio: d ? 'auto' : '16/9',
+      colsTextLeft: d ? 'minmax(0, 1fr) 55%' : '1fr',
+      colsImgLeft: d ? '55% minmax(0, 1fr)' : '1fr',
+      imgRightOrder: d ? '2' : '1',
+      textLeftOrder: d ? '1' : '2',
+      imgRatio: d ? '7/5' : '4/3',
+      textMax: d ? '420px' : 'none',
+      captionPadLeft: d ? '0' : '24px',
+      captionPadRight: d ? '0' : '24px',
+      captionAlignLeftImg: d ? 'right' : 'left',
+      showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen,
+      socialLinks: [
+        { href: this.props.instagramUrl, label: 'ODS Construction on Instagram', abbr: 'IG' },
+        { href: this.props.facebookUrl, label: 'ODS Construction on Facebook', abbr: 'FB' },
+      ].filter((s) => typeof s.href === 'string' && /^https?:\/\//.test(s.href.trim())),
+      showSocialRow: [this.props.instagramUrl, this.props.facebookUrl].some((u) => typeof u === 'string' && /^https?:\/\//.test(u.trim())),
+      submitted,
+      notSubmitted: !submitted,
+      submitForm: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      scrollTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      accNew: this._rows('accNew'),
+      accReno: this._rows('accReno'),
+      accAdd: this._rows('accAdd'),
+      accPool: this._rows('accPool'),
+      accProp: this._rows('accProp'),
+    };
+  }
+}
+</script>
+</body>
+</html>

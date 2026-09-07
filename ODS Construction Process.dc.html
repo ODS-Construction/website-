@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Our Process — How an ODS Construction Job Runs | Eleuthera</title>
+<meta name="description" content="The five stages of every ODS Construction job in Eleuthera — free site visit, written line-item estimate, procurement, construction and handover.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"GeneralContractor","@id":"https://odsconstruction.com/#organization","url":"https://odsconstruction.com","email":"info@odsconstruction.com","name":"ODS Construction","slogan":"Built Right, Built to Last.","telephone":"+1-242-470-8131","address":{"@type":"PostalAddress","addressLocality":"Palmetto Point","addressRegion":"Eleuthera","addressCountry":"BS"}},{"@type":"HowTo","@id":"https://odsconstruction.com/process#howto","name":"How an ODS Construction job runs","description":"The five stages of every ODS Construction job in Eleuthera — free site visit, written line-item estimate, procurement, construction and handover.","url":"https://odsconstruction.com/process","provider":{"@id":"https://odsconstruction.com/#organization"},"step":[{"@type":"HowToStep","position":1,"name":"Site Visit & Scope","url":"https://odsconstruction.com/process#stage-01","text":"We come and walk the property with you. We look at access, ground conditions, power and water, what's already there, and what you actually want out of the space. No charge, and no obligation."},{"@type":"HowToStep","position":2,"name":"The Written Estimate","url":"https://odsconstruction.com/process#stage-02","text":"You get a line-item estimate organised by trade, with materials separated from labour, and the landed cost of anything imported — freight, duty and VAT — already carried in the numbers."},{"@type":"HowToStep","position":3,"name":"Procurement & Scheduling","url":"https://odsconstruction.com/process#stage-03","text":"Once you approve, the first thing we do is order the long-lead items — before a shovel moves. The shipping schedule is the build schedule."},{"@type":"HowToStep","position":4,"name":"Construction","url":"https://odsconstruction.com/process#stage-04","text":"Our own crews do the structural work, the plumbing, the mechanical rough-in and the finishes, under daily site supervision, with regular photographs and every change priced and approved before it happens."},{"@type":"HowToStep","position":5,"name":"Handover & After","url":"https://odsconstruction.com/process#stage-05","text":"We walk the finished work with you, close out the punch list, hand over the documentation and equipment manuals, and stay reachable afterwards."}]}]}</script>
+<style>
+html { scroll-behavior: smooth; }
+html, body, #dc-root, .sc-host { height: auto; min-height: 100%; }
+body { margin: 0; background: #FFFFFF; color: #3A3F47; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #10264A; }
+a:hover { color: #0B4A8F; }
+:focus-visible { outline: 2px solid #0B4A8F; outline-offset: 3px; }
+input::placeholder, textarea::placeholder { color: #7A828C; }
+</style>
+</helmet>
+
+<header style="position:sticky; top:0; z-index:40; background: {{ headerBg }}; color: {{ navColor }}; box-shadow: {{ headerShadow }}; transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease">
+  <div style="max-width:1240px; margin:0 auto; padding:0 24px; height:88px; display:flex; align-items:center; justify-content:space-between; gap:32px">
+    <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color: {{ brandColor }}; line-height:1; transition:color 200ms ease">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+      <span style="font: 600 11px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:4px">construction</span>
+    </a>
+    <sc-if value="{{ isDesktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Primary" style="display:flex; align-items:center; gap:36px; height:88px">
+        <a href="/services" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Services</a>
+        <a href="/projects" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Projects</a>
+        <a href="/process" aria-current="page" style="position:relative; display:flex; align-items:center; height:88px; font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Process<span aria-hidden="true" style="position:absolute; left:0; right:0; bottom:0; height:3px; background:currentColor"></span></a>
+        <a href="/about" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">About</a>
+        <a href="/contact" style="font:600 15px Inter, system-ui, sans-serif; color:inherit; text-decoration:none" style-hover="color:#0B4A8F">Contact</a>
+        <button type="button" aria-label="Search" style="background:none; border:none; padding:8px; margin-left:8px; cursor:pointer; color:inherit; display:flex">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" style="stroke-width:1.6px; stroke-linecap:round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6"></circle><line x1="13" y1="13" x2="18" y2="18"></line></svg>
+        </button>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobileNav }}" hint-placeholder-val="{{ false }}">
+      <button type="button" aria-label="Open menu" aria-expanded="{{ menuOpen }}" onClick="{{ toggleMenu }}" style="background:none; border:none; padding:10px; cursor:pointer; color:inherit; display:flex; flex-direction:column; gap:6px; min-width:44px; min-height:44px; justify-content:center">
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+        <span style="display:block; width:24px; height:2px; background:currentColor"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Menu" style="position:fixed; inset:0; z-index:60; background:#FFFFFF; display:flex; flex-direction:column; padding:24px">
+    <div style="display:flex; justify-content:space-between; align-items:center; height:40px">
+      <span style="font: 800 30px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em; color:#10264A">ODS</span>
+      <button type="button" aria-label="Close menu" onClick="{{ toggleMenu }}" style="background:none; border:none; cursor:pointer; color:#101820; font:600 15px Inter, system-ui, sans-serif; min-width:44px; min-height:44px">Close</button>
+    </div>
+    <nav aria-label="Primary" style="display:flex; flex-direction:column; gap:8px; margin-top:48px">
+      <a href="/services" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Services</a>
+      <a href="/projects" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Projects</a>
+      <a href="/process" aria-current="page" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Process</a>
+      <a href="/about" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">About</a>
+      <a href="/contact" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Contact</a>
+    </nav>
+    <a href="#contact" onClick="{{ toggleMenu }}" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none">Request an estimate</a>
+  </div>
+</sc-if>
+
+<main>
+
+<!-- 1 PAGE HEADER (split) -->
+<section id="top" ref="{{ bandRef }}" data-screen-label="Page header" style="margin-top:-88px; padding-top:88px; background:#10264A">
+  <div style="display:grid; grid-template-columns: {{ splitCols }}; min-height:max(480px, 55vh)">
+    <div style="display:flex; flex-direction:column; justify-content:center; gap:28px; padding:clamp(64px, 8vw, 96px) clamp(32px, 5vw, 80px) clamp(64px, 8vw, 96px) max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+      <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.7)">Our process</span>
+      <h1 style="margin:0; font:800 clamp(40px, 5.5vw, 76px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF">How a job runs</h1>
+      <p style="margin:0; max-width:480px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">Every ODS job runs the same five stages, whether it's a bathroom or a whole house. It exists so you always know what stage you're at, what it costs, and what happens next.</p>
+    </div>
+    <div style="position:relative; min-height:0; overflow:hidden; aspect-ratio: {{ headerImgRatio }}">
+      <div style="position:absolute; inset:0"><image-slot id="process-header" shape="rect" placeholder="process-header.jpg — 1400×1100"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 INTRO -->
+<section data-screen-label="Intro" style="padding:clamp(72px, 9vw, 140px) 0">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap:clamp(32px, 5vw, 80px); align-items:start">
+    <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Why we do it this way</h2>
+    <div style="display:flex; flex-direction:column; gap:24px; max-width:640px">
+      <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Almost every construction dispute we've seen came from the same place — something happened that the owner didn't know about until the bill arrived. A wall opened up and there was rot behind it. A material was substituted. A trade turned up two weeks late and nobody said.</p>
+      <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">None of that is avoidable entirely. What is avoidable is finding out about it afterwards. So the process below is built around one rule: nothing gets ordered, poured or closed up before you know what it costs and why.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 STAGE 01 -->
+<section id="stage-01" data-screen-label="01 Site Visit & Scope" style="position:relative; background:#FFFFFF; padding:clamp(72px, 9vw, 140px) 0">
+  <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:max(24px, calc((100vw - 1240px) / 2)); top:0; bottom:0; width:1px; background:#DDE1E5"></div>
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 {{ stagePadLeft }}; position:relative">
+    <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:calc(max(24px, calc((100vw - 1240px) / 2)) - 5px); top:clamp(24px, 3vw, 49px); width:11px; height:11px; background:#10264A"></div>
+    <div style="position:relative; display:flex; flex-direction:column; gap:28px">
+      <span aria-hidden="true" style="display:block; margin:0 0 -16px -6px; font:800 clamp(64px, 8vw, 120px)/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.04em; color:#CDD3D9; user-select:none">01</span>
+      <h2 style="position:relative; margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Site Visit &amp; Scope</h2>
+      <p style="position:relative; margin:0; max-width:720px; font:400 19px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">We come and walk the property with you. We look at access, ground conditions, power and water, what's already there, and what you actually want out of the space — which is often not quite what the first phone call described. No charge, and no obligation.</p>
+    </div>
+    <div style="margin-top:clamp(48px, 5vw, 72px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px, 4vw, 64px)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you do</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Tell us roughly what you have in mind</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Show us the property, or arrange access if you're off-island</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Share drawings or photographs if you have them</li>
+        </ul>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you get</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A walk-through with the owner, not a salesperson</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">An honest read on whether the idea works on that site</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A rough sense of cost range before anyone spends money on drawings</li>
+        </ul>
+      </div>
+    </div>
+    <ul style="list-style:none; margin:clamp(48px, 5vw, 72px) 0 0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ acc1 }}" as="r" hint-placeholder-count="2">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 STAGE 02 -->
+<section id="stage-02" data-screen-label="02 The Written Estimate" style="position:relative; background:#EFF2F4; padding:clamp(72px, 9vw, 140px) 0">
+  <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:max(24px, calc((100vw - 1240px) / 2)); top:0; bottom:0; width:1px; background:#DDE1E5"></div>
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 {{ stagePadLeft }}; position:relative">
+    <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:calc(max(24px, calc((100vw - 1240px) / 2)) - 5px); top:clamp(24px, 3vw, 49px); width:11px; height:11px; background:#10264A"></div>
+    <div style="position:relative; display:flex; flex-direction:column; gap:28px">
+      <span aria-hidden="true" style="display:block; margin:0 0 -16px -6px; font:800 clamp(64px, 8vw, 120px)/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.04em; color:#CDD3D9; user-select:none">02</span>
+      <h2 style="position:relative; margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">The Written Estimate</h2>
+      <p style="position:relative; margin:0; max-width:720px; font:400 19px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">You get a line-item estimate organised by trade, with materials separated from labour, and the landed cost of anything imported — freight, duty and VAT — already carried in the numbers. Not a single figure at the bottom of a page.</p>
+    </div>
+    <div style="margin-top:clamp(48px, 5vw, 72px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px, 4vw, 64px)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you do</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Review it and ask about anything that isn't clear</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Tell us what you'd change if the number is higher than you hoped</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Approve it in writing before anything is ordered</li>
+        </ul>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you get</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A line-item estimate you can actually read</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Materials and labour separated, trade by trade</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Landed cost carried from the start — no surprise on arrival</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A clear list of what is excluded, not just what's included</li>
+        </ul>
+      </div>
+    </div>
+    <ul style="list-style:none; margin:clamp(48px, 5vw, 72px) 0 0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ acc2 }}" as="r" hint-placeholder-count="3">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 STAGE 03 -->
+<section id="stage-03" data-screen-label="03 Procurement & Scheduling" style="position:relative; background:#FFFFFF; padding:clamp(72px, 9vw, 140px) 0">
+  <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:max(24px, calc((100vw - 1240px) / 2)); top:0; bottom:0; width:1px; background:#DDE1E5"></div>
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 {{ stagePadLeft }}; position:relative">
+    <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:calc(max(24px, calc((100vw - 1240px) / 2)) - 5px); top:clamp(24px, 3vw, 49px); width:11px; height:11px; background:#10264A"></div>
+    <div style="position:relative; display:flex; flex-direction:column; gap:28px">
+      <span aria-hidden="true" style="display:block; margin:0 0 -16px -6px; font:800 clamp(64px, 8vw, 120px)/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.04em; color:#CDD3D9; user-select:none">03</span>
+      <h2 style="position:relative; margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Procurement &amp; Scheduling</h2>
+      <p style="position:relative; margin:0; max-width:720px; font:400 19px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Once you approve, the first thing we do is order the long-lead items — before a shovel moves. On this island the shipping schedule is the build schedule, and a job that starts before the windows are ordered is a job that stops halfway.</p>
+    </div>
+    <div style="margin-top:clamp(48px, 5vw, 72px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px, 4vw, 64px)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you do</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Sign off on material and finish selections</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Approve the start date</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Pay the deposit that releases the orders</li>
+        </ul>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you get</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A build programme sequenced around real delivery dates</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Long-lead items identified and ordered first</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A named point of contact for the whole job</li>
+        </ul>
+      </div>
+    </div>
+    <ul style="list-style:none; margin:clamp(48px, 5vw, 72px) 0 0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ acc3 }}" as="r" hint-placeholder-count="3">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 6 STAGE 04 -->
+<section id="stage-04" data-screen-label="04 Construction" style="position:relative; background:#EFF2F4; padding:clamp(72px, 9vw, 140px) 0">
+  <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:max(24px, calc((100vw - 1240px) / 2)); top:0; bottom:0; width:1px; background:#DDE1E5"></div>
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 {{ stagePadLeft }}; position:relative">
+    <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:calc(max(24px, calc((100vw - 1240px) / 2)) - 5px); top:clamp(24px, 3vw, 49px); width:11px; height:11px; background:#10264A"></div>
+    <div style="position:relative; display:flex; flex-direction:column; gap:28px">
+      <span aria-hidden="true" style="display:block; margin:0 0 -16px -6px; font:800 clamp(64px, 8vw, 120px)/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.04em; color:#CDD3D9; user-select:none">04</span>
+      <h2 style="position:relative; margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Construction</h2>
+      <p style="position:relative; margin:0; max-width:720px; font:400 19px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Our own crews do the structural work, the plumbing, the mechanical rough-in and the finishes, under daily site supervision. You get regular photographs and a straight answer about where the job stands, whether you're on the island or not.</p>
+    </div>
+    <div style="margin-top:clamp(48px, 5vw, 72px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px, 4vw, 64px)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you do</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Approve any change before the work is done</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Make selections when they come up, on the dates agreed</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Very little else — that's the point</li>
+        </ul>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you get</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Progress photographs on a regular schedule</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A written record of anything found once work opens up</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Every change priced and approved before it happens</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A tidy site at the end of every working day</li>
+        </ul>
+      </div>
+    </div>
+    <ul style="list-style:none; margin:clamp(48px, 5vw, 72px) 0 0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ acc4 }}" as="r" hint-placeholder-count="4">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 7 STAGE 05 -->
+<section id="stage-05" data-screen-label="05 Handover & After" style="position:relative; background:#FFFFFF; padding:clamp(72px, 9vw, 140px) 0">
+  <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:max(24px, calc((100vw - 1240px) / 2)); top:0; height:calc(clamp(72px, 9vw, 140px) + clamp(24px, 3vw, 49px)); width:1px; background:#DDE1E5"></div>
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 {{ stagePadLeft }}; position:relative">
+    <div aria-hidden="true" style="display: {{ connDisplay }}; position:absolute; left:calc(max(24px, calc((100vw - 1240px) / 2)) - 5px); top:clamp(24px, 3vw, 49px); width:11px; height:11px; background:#10264A"></div>
+    <div style="position:relative; display:flex; flex-direction:column; gap:28px">
+      <span aria-hidden="true" style="display:block; margin:0 0 -16px -6px; font:800 clamp(64px, 8vw, 120px)/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.04em; color:#CDD3D9; user-select:none">05</span>
+      <h2 style="position:relative; margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Handover &amp; After</h2>
+      <p style="position:relative; margin:0; max-width:720px; font:400 19px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">We walk the finished work with you, close out the punch list, hand over the documentation and equipment manuals, and stay reachable afterwards. Most of our work comes from owners we've already built for, which is the only endorsement that means much in this business.</p>
+    </div>
+    <div style="margin-top:clamp(48px, 5vw, 72px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:clamp(32px, 4vw, 64px)">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you do</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Walk the job with us and tell us what isn't right</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Sign off once the punch list is closed</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Call us when something needs attention later</li>
+        </ul>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">What you get</span>
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A punch-list walkthrough before we call it finished</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">Handover documentation and equipment manuals</li>
+          <li style="border-top:1.5px solid #10264A; padding:20px 0; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820; text-wrap:pretty">A team who still answers the phone in two years</li>
+        </ul>
+      </div>
+    </div>
+    <ul style="list-style:none; margin:clamp(48px, 5vw, 72px) 0 0; padding:0; border-bottom:1.5px solid #10264A">
+      <sc-for list="{{ acc5 }}" as="r" hint-placeholder-count="2">
+        <li style="border-top:1.5px solid #10264A">
+          <button type="button" id="btn-{{ r.id }}" aria-expanded="{{ r.open }}" aria-controls="panel-{{ r.id }}" onClick="{{ r.toggle }}" style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 0; background:none; border:none; cursor:pointer; text-align:left; font:800 19px/1.3 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#10264A">
+            <span style="text-wrap:pretty">{{ r.t }}</span>
+            <span aria-hidden="true" style="position:relative; width:24px; height:24px; flex:none; transition:transform 300ms ease; transform: {{ r.rot }}">
+              <span style="position:absolute; left:0; top:11px; width:24px; height:2px; background:#10264A"></span>
+              <span style="position:absolute; left:11px; top:0; width:2px; height:24px; background:#10264A"></span>
+            </span>
+          </button>
+          <div id="panel-{{ r.id }}" role="region" aria-labelledby="btn-{{ r.id }}" style="display:grid; grid-template-rows: {{ r.rows }}; transition:grid-template-rows 300ms ease">
+            <div style="overflow:hidden; min-height:0">
+              <p style="margin:0; padding:0 48px 24px 0; max-width:780px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">{{ r.b }}</p>
+            </div>
+          </div>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- 9 FINAL CTA -->
+<section data-screen-label="Final CTA" style="position:relative; background:#10264A; overflow:hidden">
+  <div aria-hidden="true" style="position:absolute; inset:0; opacity:0.08; background-image:linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size:96px 96px; pointer-events:none"></div>
+  <svg aria-hidden="true" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax meet" style="position:absolute; left:0; right:0; bottom:0; width:100%; height:100%; opacity:0.08; pointer-events:none" fill="none" stroke="#FFFFFF">
+    <line x1="0" y1="300" x2="1200" y2="300" style="stroke-width:1.5px"></line>
+    <path d="M360 300 L390 380 L810 380 L840 300" style="stroke-width:1.5px"></path>
+    <line x1="380" y1="320" x2="820" y2="320" style="stroke-width:1px; stroke-dasharray:6 6"></line>
+    <rect x="880" y="240" width="120" height="60" style="stroke-width:1.5px"></rect>
+    <path d="M870 240 L940 180 L1010 240" style="stroke-width:1.5px"></path>
+  </svg>
+  <div style="position:relative; max-width:1240px; margin:0 auto; box-sizing:border-box; padding:clamp(96px, 12vw, 180px) clamp(24px, calc((100vw - 1280px) * 1000), 180px) clamp(96px, 12vw, 180px) 24px; display:flex; align-items:center; justify-content:space-between; gap:48px; flex-wrap:wrap">
+    <div style="display:flex; flex-direction:column; gap:24px; max-width:640px">
+      <h2 style="margin:0; font:800 clamp(36px, 5vw, 72px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF; text-wrap:pretty">Ready to start?</h2>
+      <p style="margin:0; max-width:560px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">Stage one is a conversation and a walk around the property. It costs nothing and commits you to nothing.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:flex-start; gap:20px">
+      <a href="#contact" style="display:inline-flex; align-items:center; gap:12px; background:transparent; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none; border:1.5px solid #FFFFFF" style-hover="background:#FFFFFF; color:#10264A">Request an estimate <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+      <a href="tel:+12424708131" style="font:500 16px/1.4 Inter, system-ui, sans-serif; color:#FFFFFF; text-decoration:underline; text-underline-offset:4px" style-hover="color:#FFFFFF; opacity:0.85">Or call (242) 470-8131</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 10 FOOTER -->
+<footer id="contact" data-screen-label="Footer" style="padding:clamp(72px, 8vw, 120px) 0 40px">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:48px">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap">
+      <a href="/" aria-label="ODS Construction — home" style="display:flex; flex-direction:column; align-items:flex-start; text-decoration:none; color:#10264A; line-height:1">
+        <span style="font: 800 34px/0.9 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.03em">ODS</span>
+        <span style="font: 600 12px/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:0.06em; margin-top:5px">construction</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(20px, 3vw, 48px)">
+        <p style="margin:0; font:800 clamp(22px, 2.4vw, 34px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Built Right, Built to Last.</p>
+        <button type="button" aria-label="Scroll to top" onClick="{{ scrollTop }}" style="width:64px; height:64px; flex:none; background:#10264A; border:none; color:#FFFFFF; display:grid; place-items:center; cursor:pointer; border-radius:2px" style-hover="background:#0B4A8F"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"></path></svg></button>
+      </div>
+    </div>
+    <div style="height:1px; background:#DDE1E5"></div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:clamp(40px, 5vw, 72px)">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Contact</h3>
+        <a href="tel:+12424708131" style="font:800 clamp(30px, 3vw, 44px)/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#10264A; text-decoration:none">(242) 470-8131</a>
+        <a href="{{ emailHref }}" style="font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">{{ emailText }}</a>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">Palmetto Point<br>Eleuthera, The Bahamas</p>
+      </div>
+      <nav aria-label="Footer" style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Links</h3>
+        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px">
+          <li><a href="/services" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
+          <li><a href="/projects" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
+          <li><a href="/process" aria-current="page" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
+          <li><a href="/about" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
+          <li><a href="/contact" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
+          <li><a href="/privacy" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Request an estimate</h3>
+        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitForm }}" aria-label="Request an estimate" style="display:flex; flex-direction:column; gap:12px">
+            <label for="f-name" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Name</label>
+            <input id="f-name" name="name" type="text" required placeholder="Name" autocomplete="name" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <label for="f-email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Email</label>
+            <input id="f-email" name="email" type="email" required placeholder="Email" autocomplete="email" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <label for="f-phone" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Phone</label>
+            <input id="f-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <label for="f-type" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Project type</label>
+            <select id="f-type" name="projectType" required defaultValue="" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:auto">
+              <option value="" disabled>Project type</option>
+              <option value="New Construction">New Construction</option>
+              <option value="Renovation">Renovation</option>
+              <option value="Addition">Addition</option>
+              <option value="Pool">Pool</option>
+              <option value="Roofing">Roofing</option>
+              <option value="Property Management">Property Management</option>
+              <option value="Other">Other</option>
+            </select>
+            <label for="f-message" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Message" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical"></textarea>
+            <button type="submit" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">Send request <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
+          </form>
+        </sc-if>
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div role="status" style="background:#EFF2F4; padding:32px; display:flex; flex-direction:column; gap:8px">
+            <p style="margin:0; font:800 22px/1.2 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Thank you — we've got your request.</p>
+            <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">We'll be in touch to arrange a site visit. For anything urgent, call (242) 470-8131.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:12px; margin-top:8px">
+            <p style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Find us on</p>
+            <div style="display:flex; gap:12px; align-items:center">
+              <sc-for list="{{ socialLinks }}" as="s" hint-placeholder-count="0">
+                <a href="{{ s.href }}" target="_blank" rel="noopener" aria-label="{{ s.label }}" style="width:44px; height:44px; border-radius:50%; background:#EFF2F4; display:grid; place-items:center; font:600 12px Inter, system-ui, sans-serif; color:#10264A; text-decoration:none" style-hover="background:#10264A; color:#FFFFFF">{{ s.abbr }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <div style="height:1px; background:#DDE1E5"></div>
+    <p style="margin:0; text-align:center; font:400 13px Inter, system-ui, sans-serif; color:#7A828C">© 2026 ODS Construction. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FIXED BADGE -->
+<sc-if value="{{ showBadge }}" hint-placeholder-val="{{ true }}">
+  <a href="#contact" aria-label="Request an estimate" style="position:fixed; right:32px; bottom:32px; z-index:45; width:120px; height:120px; border-radius:50%; background:#10264A; color:#FFFFFF; display:grid; place-items:center; text-decoration:none; box-shadow:0 8px 24px rgba(16,38,74,0.22), 0 2px 6px rgba(16,38,74,0.12); transition:box-shadow 300ms ease, background 300ms ease" style-hover="background:#0B4A8F; box-shadow:0 14px 32px rgba(16,38,74,0.3), 0 2px 6px rgba(16,38,74,0.12)">
+    <svg ref="{{ ringRef }}" viewBox="0 0 120 120" width="120" height="120" style="position:absolute; inset:0; will-change:transform" aria-hidden="true">
+      <defs><path id="ods-badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"></path></defs>
+      <text fill="#FFFFFF" style="font:600 8.5px Inter, system-ui, sans-serif; letter-spacing:0.14em"><textPath href="#ods-badge-circle" textLength="286" lengthAdjust="spacing">REQUEST AN ESTIMATE · REQUEST AN ESTIMATE ·</textPath></text>
+    </svg>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round; position:relative" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1"></rect><path d="M3 7l9 6 9-6"></path></svg>
+  </a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showBadge&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;},&quot;facebookUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Social&quot;}}">
+class Component extends DCLogic {
+  state = {
+    emailHref: '#contact',
+    emailText: 'Email us',
+    open: {},
+    menuOpen: false,
+    scrolled: false,
+    submitted: false,
+    vw: typeof window !== 'undefined' ? window.innerWidth : 1440,
+  };
+
+  acc = {
+    acc1: [
+      { t: "If you're not on the island", b: "We'll walk it with your caretaker or agent and send you photographs and video, then talk it through on a call. Plenty of our jobs start this way." },
+      { t: "If you don't have drawings yet", b: "That's normal at this stage. We'll tell you whether you need an architect, an engineer, or neither, and we can recommend people. We don't do design ourselves." },
+    ],
+    acc2: [
+      { t: 'Why the exclusions list matters as much as the inclusions', b: "Most estimate disputes come from something the owner assumed was in the price. Ours says plainly what isn't — so if you were expecting it, you find out now rather than at the end." },
+      { t: 'What "landed cost" actually means', b: "A window that costs $2,000 in Florida does not cost $2,000 on your site. Add ocean freight, import duty, VAT and the trucking from the dock and it can land a long way north of that. We put the real delivered number in the estimate. A price that quotes you the Florida figure isn't cheaper — it's just incomplete." },
+      { t: 'What the estimate costs you', b: 'Nothing. The site visit and the written estimate are free.' },
+    ],
+    acc3: [
+      { t: 'What counts as a long-lead item', b: 'Windows and doors. Roofing. Pool and mechanical equipment. Cabinetry, tile and specialty finishes. Anything made to order. These decide your finish date, so they get ordered first and the rest of the programme is built around when they land.' },
+      { t: 'How shipping works', b: "Materials are consolidated in South Florida and shipped into Eleuthera through King Ocean or TWINex. We handle the forwarding, the customs entry and the collection from the dock — you don't deal with any of it." },
+      { t: 'What can move a date, honestly', b: "Weather, a delayed sailing, a customs hold, or something found on site once work starts. We can't remove those. What we can do is tell you the day we know, rather than the week before handover." },
+    ],
+    acc4: [
+      { t: 'How payment works during the build', b: '[CONFIRM — describe how progress payments are structured on a larger job: what stages trigger a payment, what the client receives when one is due, and how long they have to pay. Do not invent terms — leave this placeholder visible until the real wording is supplied.]' },
+      { t: 'How changes are handled', b: "When something needs to change — you want it different, or the building had other ideas — it gets written down, priced and sent to you before the work happens. You approve it or you don't. Nothing goes on the final bill that you haven't already seen." },
+      { t: 'How we report progress', b: "Photographs and a written update on a regular cadence, sent to whoever you want them sent to. If you're off-island for the whole build, this is how you'll know the job is real, and we take it seriously." },
+      { t: "Who's on your site", b: 'Our crews, supervised daily. Where a specialist is brought in, they work to our programme and under our supervision — you still deal with us, not with them.' },
+    ],
+    acc5: [
+      { t: 'What happens if something goes wrong later', b: "Call. We're on the island and we built it, so we know what's behind the wall. [CONFIRM — describe how you handle callbacks, and whether there's a warranty period. Delete this row if you'd rather not put it in writing.]" },
+      { t: "Keeping an eye on it while you're away", b: 'If the house sits empty for part of the year, our property management service covers scheduled maintenance, storm preparation and post-storm checks on a fixed monthly fee.' },
+    ],
+  };
+
+  ringRef = React.createRef();
+  bandRef = React.createRef();
+  _ring = { target: 0, current: 0, raf: 0 };
+
+  _tickRing = () => {
+    const r = this._ring;
+    r.current += (r.target - r.current) * 0.12;
+    if (this.ringRef.current) this.ringRef.current.style.transform = 'rotate(' + r.current.toFixed(3) + 'deg)';
+    if (Math.abs(r.target - r.current) > 0.02) r.raf = requestAnimationFrame(this._tickRing);
+    else { r.current = r.target; r.raf = 0; }
+  };
+
+  componentDidMount() {
+    const addr = ['info', 'odsconstruction', 'com'].reduce((a, p, i) => a + (i === 1 ? '@' : i === 2 ? '.' : '') + p, '');
+    this.setState({ emailHref: 'mai' + 'lto:' + addr, emailText: addr });
+    this._reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._onResize = () => this.setState({ vw: window.innerWidth });
+    this._onScroll = () => {
+      const band = this.bandRef.current;
+      const threshold = band ? Math.max(band.offsetHeight - 88, 40) : 300;
+      const s = window.scrollY > threshold;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+      if (!this._reduceMotion) {
+        this._ring.target = window.scrollY * 0.15;
+        if (!this._ring.raf) this._ring.raf = requestAnimationFrame(this._tickRing);
+      }
+    };
+    window.addEventListener('resize', this._onResize);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    if ((this.props.revealAnimations ?? true) && 'IntersectionObserver' in window) {
+      const els = Array.from(document.querySelectorAll('[data-reveal]'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.08 });
+      els.forEach((el) => {
+        if (el.getBoundingClientRect().top <= window.innerHeight) return;
+        el.style.transition = 'opacity 500ms ease, transform 500ms ease';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        io.observe(el);
+      });
+      this._io = io;
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+    if (this._ring.raf) cancelAnimationFrame(this._ring.raf);
+  }
+
+  _rows(key) {
+    return this.acc[key].map((r, i) => {
+      const id = key + '-' + i;
+      const open = !!this.state.open[id];
+      return {
+        ...r, id, open,
+        rows: open ? '1fr' : '0fr',
+        rot: open ? 'rotate(45deg)' : 'rotate(0deg)',
+        toggle: () => this.setState((s) => ({ open: { ...s.open, [id]: !s.open[id] } })),
+      };
+    });
+  }
+
+  renderVals() {
+    const { emailHref, emailText, menuOpen, scrolled, submitted, vw } = this.state;
+    const isDesktopNav = vw >= 1024;
+    const d = isDesktopNav;
+    const onNavy = !scrolled && !menuOpen;
+    return {
+      emailHref,
+      emailText,
+      isDesktopNav,
+      isMobileNav: !isDesktopNav,
+      menuOpen,
+      toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
+      headerBg: onNavy ? 'rgba(255,255,255,0)' : '#FFFFFF',
+      navColor: onNavy ? '#FFFFFF' : '#101820',
+      brandColor: onNavy ? '#FFFFFF' : '#10264A',
+      headerShadow: scrolled ? '0 1px 0 #DDE1E5' : '0 1px 0 rgba(221,225,229,0)',
+      bandRef: this.bandRef,
+      ringRef: this.ringRef,
+      splitCols: d ? '1fr 1fr' : '1fr',
+      headerImgRatio: d ? 'auto' : '16/9',
+      connDisplay: d ? 'block' : 'none',
+      stagePadLeft: d ? '88px' : '24px',
+      showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen,
+      socialLinks: [
+        { href: this.props.instagramUrl, label: 'ODS Construction on Instagram', abbr: 'IG' },
+        { href: this.props.facebookUrl, label: 'ODS Construction on Facebook', abbr: 'FB' },
+      ].filter((s) => typeof s.href === 'string' && /^https?:\/\//.test(s.href.trim())),
+      showSocialRow: [this.props.instagramUrl, this.props.facebookUrl].some((u) => typeof u === 'string' && /^https?:\/\//.test(u.trim())),
+      submitted,
+      notSubmitted: !submitted,
+      submitForm: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      scrollTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      acc1: this._rows('acc1'),
+      acc2: this._rows('acc2'),
+      acc3: this._rows('acc3'),
+      acc4: this._rows('acc4'),
+      acc5: this._rows('acc5'),
+    };
+  }
+}
+</script>
+</body>
+</html>
