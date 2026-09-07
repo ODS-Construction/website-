@@ -314,7 +314,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
             </select>
             <label for="f-message" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Message</label>
             <textarea id="f-message" name="message" rows="4" placeholder="Message" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical"></textarea>
-            <button type="submit" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">Send request <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
+            <sc-if value="{{ sendFailed }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">Something went wrong — please call (242) 470-8131 or try again.</p></sc-if>
+            <button type="submit" disabled="{{ sending }}" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">{{ submitLabel }} <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
           </form>
         </sc-if>
         <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
@@ -547,13 +548,14 @@ class Component extends DCLogic {
 
   renderVals() {
     const P = Component.PROJECTS;
-    const { emailHref, emailText, menuOpen, scrolled, submitted, vw, slug, type, loc, page, gridOpacity, hover, pnHover, lbOpen, lbIndex } = this.state;
+    const { emailHref, emailText, menuOpen, scrolled, submitted, vw, slug, type, loc, page, gridOpacity, hover, pnHover, lbOpen, lbIndex, sending, sendFailed } = this.state;
     const d = vw >= 1024, m = vw < 768;
     const project = this._project(slug);
     const isDetail = !!project;
     const onNavy = !scrolled && !menuOpen;
     const out = {
       emailHref, emailText, menuOpen, submitted, notSubmitted: !submitted,
+      sending, sendFailed, submitLabel: sending ? 'Sending…' : 'Send request',
       isDesktopNav: d, isMobileNav: !d,
       toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
       headerBg: onNavy ? '#10264A' : '#FFFFFF',
@@ -565,7 +567,23 @@ class Component extends DCLogic {
       goArchive: (e) => this._go({ slug: '', type: '', loc: '', page: 1 }, e),
       goArchiveMenu: (e) => this._go({ slug: '', type: '', loc: '', page: 1 }, e),
       showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen && !lbOpen,
-      submitForm: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      submitForm: async (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const fd = new FormData(form);
+        fd.append('access_key', '8227352e-a23a-4315-9f9c-0b994e7a7518');
+        fd.append('subject', 'New estimate request — ODS Construction website');
+        fd.append('from_name', 'ODS Construction Website');
+        this.setState({ sending: true, sendFailed: false });
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
+          const data = await res.json().catch(() => null);
+          const ok = res.ok && !!data && data.success !== false;
+          this.setState({ sending: false, submitted: ok, sendFailed: !ok });
+        } catch (_) {
+          this.setState({ sending: false, sendFailed: true });
+        }
+      },
       scrollTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
       isArchive: !isDetail, isDetail,
       splitCols: d ? '1fr 1fr' : '1fr',

@@ -424,7 +424,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
             </select>
             <label for="f-message" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Message</label>
             <textarea id="f-message" name="message" rows="4" placeholder="Message" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical"></textarea>
-            <button type="submit" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">Send request <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
+            <sc-if value="{{ sendFailed }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">Something went wrong — please call (242) 470-8131 or try again.</p></sc-if>
+            <button type="submit" disabled="{{ sending }}" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">{{ submitLabel }} <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
           </form>
         </sc-if>
         <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
@@ -549,7 +550,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const { emailHref, emailText, openProject, openFaq, menuOpen, scrolled, submitted, vw } = this.state;
+    const { emailHref, emailText, openProject, openFaq, menuOpen, scrolled, submitted, vw, sending, sendFailed } = this.state;
     const isDesktopNav = vw >= 1024;
     return {
       emailHref,
@@ -568,7 +569,26 @@ class Component extends DCLogic {
       showSocialRow: [this.props.instagramUrl, this.props.facebookUrl].some((u) => typeof u === 'string' && /^https?:\/\//.test(u.trim())),
       submitted,
       notSubmitted: !submitted,
-      submitForm: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      sending,
+      sendFailed,
+      submitLabel: sending ? 'Sending…' : 'Send request',
+      submitForm: async (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const fd = new FormData(form);
+        fd.append('access_key', '8227352e-a23a-4315-9f9c-0b994e7a7518');
+        fd.append('subject', 'New estimate request — ODS Construction website');
+        fd.append('from_name', 'ODS Construction Website');
+        this.setState({ sending: true, sendFailed: false });
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
+          const data = await res.json().catch(() => null);
+          const ok = res.ok && !!data && data.success !== false;
+          this.setState({ sending: false, submitted: ok, sendFailed: !ok });
+        } catch (_) {
+          this.setState({ sending: false, sendFailed: true });
+        }
+      },
       scrollTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
       projects: this.projects.map((p, i) => {
         const open = openProject === i;

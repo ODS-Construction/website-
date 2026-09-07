@@ -507,7 +507,7 @@ class Component extends DCLogic {
 
   async _send(fd) {
     const endpoint = this.props.formEndpoint ?? 'https://api.web3forms.com/submit';
-    fd.append('access_key', '3634b08d-9261-4ef9-b3c6-3c4987ccf6f1');
+    fd.append('access_key', '8227352e-a23a-4315-9f9c-0b994e7a7518');
     fd.append('subject', 'New estimate request — ODS Construction website');
     fd.append('from_name', 'ODS Construction Website');
     const res = await fetch(endpoint, { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
