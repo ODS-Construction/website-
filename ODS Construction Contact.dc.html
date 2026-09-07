@@ -93,7 +93,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     <div style="min-width:0; display:flex; flex-direction:column; gap:36px">
       <div style="display:flex; flex-direction:column; gap:24px">
         <h2 style="margin:0; font:800 clamp(34px, 3.6vw, 52px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Request an Estimate</h2>
-        <p style="margin:0; max-width:620px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Tell us what you have in mind and we'll come and look at it. The site visit and the written estimate are free, and there's no obligation to build. Fields marked with an asterisk (*) are required — leave anything else blank if you're not sure and we'll ask.</p>
+        <p style="margin:0; max-width:620px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Tell us what you have in mind and we'll come and look at it. The site visit and the written estimate are free, and there's no obligation to build. Fields marked with an asterisk (*) are required. Leave anything else blank if you're not sure and we'll ask.</p>
       </div>
 
         <form ref="{{ formRef }}" onSubmit="{{ submitForm }}" noValidate aria-label="Request an estimate" style="display:grid; grid-template-columns: {{ fieldCols }}; column-gap:24px; row-gap:22px">
@@ -186,7 +186,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
               <option value="Over $500,000">Over $500,000</option>
               <option value="Prefer not to say">Prefer not to say</option>
             </select><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#7A828C" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); pointer-events:none; stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg></div>
-            <p style="margin:0; font:400 13px/1.5 Inter, system-ui, sans-serif; color:#7A828C">[CONFIRM — keep this field or remove it?]</p>
+            <p style="margin:0; font:400 13px/1.5 Inter, system-ui, sans-serif; color:#7A828C">[CONFIRM: keep this field or remove it?]</p>
           </div>
 
           <div style="grid-column:1 / -1; display:flex; flex-direction:column; gap:8px; min-width:0">
@@ -227,7 +227,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
                 <p style="margin:0; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#3A3F47">Please try again, or reach us directly at <a href="tel:+12424708131" style="color:#10264A; font-weight:600">(242) 470-8131</a> or <a href="{{ emailHref }}" style="color:#10264A; font-weight:600">{{ emailText }}</a>.</p>
               </div>
             </sc-if>
-            <p style="margin:0; font:400 14px/1.5 Inter, system-ui, sans-serif; color:#7A828C">We read every message ourselves. [CONFIRM — add a response-time commitment here, e.g. "You'll hear back within one business day." Only include it if you'll hold to it.]</p>
+            <p style="margin:0; font:400 14px/1.5 Inter, system-ui, sans-serif; color:#7A828C">We read every message ourselves. [CONFIRM: add a response-time commitment here, e.g. "You'll hear back within one business day." Only include it if you'll hold to it.]</p>
           </div>
         </form>
     </div>
@@ -240,7 +240,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       </div>
       <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
         <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">WhatsApp</p>
-        <p style="margin:0; font:400 15px/1.55 Inter, system-ui, sans-serif; color:#7A828C">[CONFIRM — publish a WhatsApp number? Most enquiries here arrive that way, so it's worth having. Delete this block if you'd rather not.]</p>
+        <p style="margin:0; font:400 15px/1.55 Inter, system-ui, sans-serif; color:#7A828C">[CONFIRM: publish a WhatsApp number? Most enquiries here arrive that way, so it's worth having. Delete this block if you'd rather not.]</p>
       </div>
       <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
         <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Email</p>
@@ -252,7 +252,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       </div>
       <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
         <p style="margin:0; font:700 15px Inter, system-ui, sans-serif; color:#101820">Already a client?</p>
-        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">If we're already building for you or managing your property, call or text and it comes straight to us — you don't need the form.</p>
+        <p style="margin:0; font:400 16px/1.6 Inter, system-ui, sans-serif; color:#3A3F47">If we're already building for you or managing your property, call or text and it comes straight to us. You don't need the form.</p>
       </div>
       <sc-if value="{{ showSocialRow }}" hint-placeholder-val="{{ false }}">
         <div style="border-top:2px solid #101820; padding-top:20px; display:flex; flex-direction:column; gap:12px">
@@ -276,7 +276,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">What happens next</h2>
     </div>
     <ol style="list-style:none; margin:0; padding:0; border-bottom:1.5px solid #10264A">
-      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">01</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We get in touch to ask a few questions — usually by phone, sometimes by email</span></li>
+      <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">01</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We get in touch to ask a few questions, usually by phone, sometimes by email</span></li>
       <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">02</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We come and walk the property with you, at no charge</span></li>
       <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">03</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">You get a written, line-item estimate separating materials from labour</span></li>
       <li style="border-top:1.5px solid #10264A; padding:24px 0; display:grid; grid-template-columns:48px 1fr; gap:16px; align-items:baseline"><span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C">04</span><span style="font:600 19px/1.4 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.01em; color:#101820; text-wrap:pretty">We go through it with you and answer whatever comes up</span></li>
@@ -295,7 +295,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
         <span style="display:block; height:1px; width:100%; min-width:88px; background:#DDE1E5"></span>
       </div>
       <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">Where we work</h2>
-      <p style="margin:0; max-width:720px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We're based in Palmetto Point and work the length of Eleuthera, plus Harbour Island and Windermere Island. If your site isn't listed here, call and ask — the answer is usually yes.</p>
+      <p style="margin:0; max-width:720px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We're based in Palmetto Point and work the length of Eleuthera, plus Harbour Island and Windermere Island. If your site isn't listed here, call and ask. The answer is usually yes.</p>
     </div>
     <ul style="list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr)); column-gap:clamp(32px, 5vw, 80px); border-top:1px solid #DDE1E5">
       <li style="padding:18px 0; border-bottom:1px solid #DDE1E5; font:500 17px/1.5 Inter, system-ui, sans-serif; color:#101820">Harbour Island</li>
