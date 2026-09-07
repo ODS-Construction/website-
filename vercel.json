@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/ODS Construction Homepage.dc.html" },
+    { "source": "/about", "destination": "/ODS Construction About.dc.html" },
+    { "source": "/contact", "destination": "/ODS Construction Contact.dc.html" },
+    { "source": "/process", "destination": "/ODS Construction Process.dc.html" },
+    { "source": "/projects", "destination": "/ODS Construction Projects.dc.html" },
+    { "source": "/services", "destination": "/ODS Construction Services.dc.html" },
+    { "source": "/services/:slug", "destination": "/ODS Construction Services.dc.html" }
+  ]
+}
