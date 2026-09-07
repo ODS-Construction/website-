@@ -1,0 +1,10 @@
+# ODS Construction — https://www.odsconstruction.com
+# All public pages are open to crawling, including AI/search assistants.
+# /thank-you is kept out of search with a noindex meta tag rather than a
+# Disallow rule, because a blocked URL can still be indexed without its
+# content: crawlers must be able to fetch the page to see the noindex.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.odsconstruction.com/sitemap.xml

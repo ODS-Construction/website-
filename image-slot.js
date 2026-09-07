@@ -438,7 +438,7 @@
 
   class ImageSlot extends HTMLElement {
     static get observedAttributes() {
-      return ['shape', 'radius', 'mask', 'fit', 'placeholder', 'src', 'id', 'credit', 'credit-href'];
+      return ['shape', 'radius', 'mask', 'fit', 'placeholder', 'src', 'id', 'credit', 'credit-href', 'alt'];
     }
 
     /** Duplicate-slide hook (called by deck-stage, see its
@@ -1147,6 +1147,10 @@
           this._releaseMask();
         }
         this._hidShowing = false;
+        // Authored alt text passes through to the real <img>. Absent or empty
+        // leaves alt="" so an undescribed slot stays decorative rather than
+        // exposing a placeholder filename to assistive tech and crawlers.
+        this._img.alt = this.getAttribute('alt') || '';
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
         this.setAttribute('data-filled', '');
