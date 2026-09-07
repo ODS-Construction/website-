@@ -107,7 +107,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       <div style="display:flex; flex-direction: {{ barDir }}; gap:12px; width: {{ selectsW }}">
         <div style="position:relative; width: {{ selectW }}">
           <label for="filter-type" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Filter by type</label>
-          <select id="filter-type" value="{{ type }}" onChange="{{ onType }}" style="width:100%; box-sizing:border-box; padding:12px 40px 12px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none; cursor:pointer" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+          <select id="filter-type" value="{{ type }}" onChange="{{ onType }}" style="width:100%; box-sizing:border-box; padding:12px 40px 12px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 16px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none; cursor:pointer" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
             <option value="">Filter by type: All</option>
             <sc-for list="{{ typeOptions }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.v }}</option></sc-for>
           </select>
@@ -115,7 +115,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
         </div>
         <div style="position:relative; width: {{ selectW }}">
           <label for="filter-location" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Filter by location</label>
-          <select id="filter-location" value="{{ loc }}" onChange="{{ onLoc }}" style="width:100%; box-sizing:border-box; padding:12px 40px 12px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none; cursor:pointer" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
+          <select id="filter-location" value="{{ loc }}" onChange="{{ onLoc }}" style="width:100%; box-sizing:border-box; padding:12px 40px 12px 14px; border:1.5px solid #DDE1E5; border-radius:2px; font:400 16px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:none; cursor:pointer" style-focus="border-color:#10264A; box-shadow:0 0 0 3px rgba(16,38,74,0.15); outline:none">
             <option value="">Filter by location: All</option>
             <sc-for list="{{ locOptions }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.v }}</option></sc-for>
           </select>
@@ -293,24 +293,24 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       <nav aria-label="Footer" style="display:flex; flex-direction:column; gap:20px">
         <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Links</h3>
         <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px">
-          <li><a href="/services" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
-          <li><a href="{{ archiveHref }}" onClick="{{ goArchive }}" aria-current="page" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
-          <li><a href="/process" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
-          <li><a href="/about" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
-          <li><a href="/contact" style="font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
+          <li><a href="/services" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
+          <li><a href="{{ archiveHref }}" onClick="{{ goArchive }}" aria-current="page" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
+          <li><a href="/process" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
+          <li><a href="/about" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
+          <li><a href="/contact" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
         </ul>
       </nav>
       <div style="display:flex; flex-direction:column; gap:20px">
         <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Request an estimate</h3>
           <form onSubmit="{{ submitForm }}" aria-label="Request an estimate" style="display:flex; flex-direction:column; gap:12px">
             <label for="f-name" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Name</label>
-            <input id="f-name" name="name" type="text" required placeholder="Name" autocomplete="name" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <input id="f-name" name="name" type="text" required placeholder="Name" autocomplete="name" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 16px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
             <label for="f-email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Email</label>
-            <input id="f-email" name="email" type="email" required placeholder="Email" autocomplete="email" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <input id="f-email" name="email" type="email" required placeholder="Email" autocomplete="email" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 16px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
             <label for="f-phone" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Phone</label>
-            <input id="f-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
+            <input id="f-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 16px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF">
             <label for="f-type" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Project type</label>
-            <select id="f-type" name="projectType" required defaultValue="" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:auto">
+            <select id="f-type" name="projectType" required defaultValue="" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 16px Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; appearance:auto">
               <option value="" disabled>Project type</option>
               <option value="New Construction">New Construction</option>
               <option value="Renovation">Renovation</option>
@@ -321,7 +321,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
               <option value="Other">Other</option>
             </select>
             <label for="f-message" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Message</label>
-            <textarea id="f-message" name="message" rows="4" placeholder="Message" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 15px/1.5 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical"></textarea>
+            <textarea id="f-message" name="message" rows="4" placeholder="Message" style="width:100%; box-sizing:border-box; padding:14px 16px; border:1px solid #DDE1E5; border-radius:2px; font:400 16px/1.5 Inter, system-ui, sans-serif; color:#101820; background:#FFFFFF; resize:vertical"></textarea>
             <sc-if value="{{ sendFailed }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0; font:400 14px/1.4 Inter, system-ui, sans-serif; color:#C4302B">Something went wrong. Please call (242) 470-8131 or try again.</p></sc-if>
             <button type="submit" disabled="{{ sending }}" style="align-self:flex-start; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border:none; border-radius:2px; cursor:pointer; margin-top:4px" style-hover="background:#0B4A8F">{{ submitLabel }} <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
           </form>
@@ -414,7 +414,10 @@ class Component extends DCLogic {
   // In production these map to /projects/ and /projects/[slug]/.
   _readUrl() {
     const q = new URLSearchParams(window.location.search);
-    return { slug: q.get('project') || '', type: q.get('type') || '', loc: q.get('location') || '', page: Math.max(1, parseInt(q.get('page'), 10) || 1) };
+    const asked = q.get('project') || '';
+    // An old or hand-typed link to an unpublished project falls back to the list.
+    const slug = this._project(asked) ? asked : '';
+    return { slug, type: q.get('type') || '', loc: q.get('location') || '', page: Math.max(1, parseInt(q.get('page'), 10) || 1) };
   }
   _href(o) {
     const q = new URLSearchParams();
@@ -428,7 +431,17 @@ class Component extends DCLogic {
     if (url === window.location.pathname + window.location.search) return;
     try { window.history[push ? 'pushState' : 'replaceState'](null, '', url); } catch (e) {}
   }
-  _project(slug) { return Component.PROJECTS.find((p) => p.slug === slug) || null; }
+  // A project earns a detail page only once its body copy is written. Until then
+  // its card stays non-interactive, rather than opening a page of placeholders.
+  static isPublished(p) {
+    return !!p && Array.isArray(p.body)
+      && p.body.some((t) => typeof t === 'string' && t.trim() && !/^\[.*\]$/.test(t.trim()));
+  }
+
+  _project(slug) {
+    const p = Component.PROJECTS.find((x) => x.slug === slug) || null;
+    return Component.isPublished(p) ? p : null;
+  }
 
   _syncHead() {
     const p = this._project(this.state.slug);
@@ -449,7 +462,13 @@ class Component extends DCLogic {
     };
     const ld = p
       ? { '@context': 'https://schema.org', ...cw(p), isPartOf: { '@type': 'CollectionPage', url: 'https://www.odsconstruction.com/projects' } }
-      : { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Projects', url: 'https://www.odsconstruction.com/projects', description: baseDesc, publisher: org, hasPart: Component.PROJECTS.map(cw) };
+      : (() => {
+          const o = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Projects', url: 'https://www.odsconstruction.com/projects', description: baseDesc, publisher: org };
+          // Only advertise projects that actually have a page behind them.
+          const parts = Component.PROJECTS.filter((x) => Component.isPublished(x)).map(cw);
+          if (parts.length) o.hasPart = parts;
+          return o;
+        })();
     let s = document.getElementById('projects-jsonld');
     if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'projects-jsonld'; document.head.appendChild(s); }
     s.textContent = JSON.stringify(ld);
@@ -627,17 +646,23 @@ class Component extends DCLogic {
       hasResults: filtered.length > 0, noResults: filtered.length === 0,
       gridCols: d ? 'repeat(3, minmax(0, 1fr))' : m ? '1fr' : 'repeat(2, minmax(0, 1fr))',
       gridOpacity,
-      cards: slice.map((p) => ({
-        slug: p.slug, title: p.title, type: p.type, location: p.location,
-        coverLabel: p.cover + ' — 1400×930',
-        alt: p.title + ', ' + p.location,
-        href: this._href({ slug: p.slug }),
-        go: (e) => this._go({ slug: p.slug }, e),
-        enter: () => this.setState({ hover: p.slug }),
-        leave: () => this.setState({ hover: '' }),
-        scale: hover === p.slug ? 'scale(1.03)' : 'scale(1)',
-        titleColor: hover === p.slug ? '#10264A' : '#101820',
-      })),
+      cards: slice.map((p) => {
+        // Without an href the anchor is inert: no navigation, no focus stop and
+        // no pointer cursor. The hover affordances come off too, so a card that
+        // cannot be opened does not look like it can be.
+        const open = Component.isPublished(p);
+        return {
+          slug: p.slug, title: p.title, type: p.type, location: p.location,
+          coverLabel: p.cover + ' — 1400×930',
+          alt: open ? p.title + ', ' + p.location : undefined,
+          href: open ? this._href({ slug: p.slug }) : undefined,
+          go: open ? (e) => this._go({ slug: p.slug }, e) : undefined,
+          enter: open ? () => this.setState({ hover: p.slug }) : undefined,
+          leave: open ? () => this.setState({ hover: '' }) : undefined,
+          scale: open && hover === p.slug ? 'scale(1.03)' : 'scale(1)',
+          titleColor: open && hover === p.slug ? '#10264A' : '#101820',
+        };
+      }),
       showPagination: pageCount > 1,
       pages: Array.from({ length: pageCount }, (_, i) => ({ n: i + 1, current: i + 1 === cur ? 'page' : undefined, color: i + 1 === cur ? '#10264A' : '#7A828C', border: i + 1 === cur ? '#10264A' : 'transparent', go: () => this._setPage(i + 1) })),
       prevDisabled: cur <= 1, nextDisabled: cur >= pageCount,
