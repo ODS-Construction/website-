@@ -1,20 +1,61 @@
 {
   "trailingSlash": false,
   "redirects": [
-    { "source": "/services/new-construction", "destination": "/services#new-home-construction", "permanent": true },
-    { "source": "/services/renovations", "destination": "/services#renovations", "permanent": true },
-    { "source": "/services/additions", "destination": "/services#additions", "permanent": true },
-    { "source": "/services/pools", "destination": "/services#pools", "permanent": true },
-    { "source": "/services/property-management", "destination": "/services#property-management", "permanent": true },
-    { "source": "/services/:slug", "destination": "/services", "permanent": true }
+    {
+      "source": "/services/new-construction",
+      "destination": "/services#new-home-construction",
+      "permanent": true
+    },
+    {
+      "source": "/services/renovations",
+      "destination": "/services#renovations",
+      "permanent": true
+    },
+    {
+      "source": "/services/additions",
+      "destination": "/services#additions",
+      "permanent": true
+    },
+    {
+      "source": "/services/pools",
+      "destination": "/services#pools",
+      "permanent": true
+    },
+    {
+      "source": "/services/property-management",
+      "destination": "/services#property-management",
+      "permanent": true
+    },
+    {
+      "source": "/services/:slug",
+      "destination": "/services",
+      "permanent": true
+    }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/ODS Construction Homepage.dc.html" },
-    { "source": "/about", "destination": "/ODS Construction About.dc.html" },
-    { "source": "/contact", "destination": "/ODS Construction Contact.dc.html" },
-    { "source": "/process", "destination": "/ODS Construction Process.dc.html" },
-    { "source": "/projects", "destination": "/ODS Construction Projects.dc.html" },
-    { "source": "/services", "destination": "/ODS Construction Services.dc.html" },
-    { "source": "/thank-you", "destination": "/ODS Construction Thank You.dc.html" }
+    {
+      "source": "/",
+      "destination": "/ODS Construction Homepage.dc.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/ODS Construction About.dc.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/ODS Construction Contact.dc.html"
+    },
+    {
+      "source": "/process",
+      "destination": "/ODS Construction Process.dc.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/ODS Construction Services.dc.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/ODS Construction Thank You.dc.html"
+    }
   ]
 }
