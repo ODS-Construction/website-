@@ -102,6 +102,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
   </section>
 
   <!-- ARCHIVE · FILTER BAR -->
+  <sc-if value="{{ hasAny }}" hint-placeholder-val="{{ true }}">
   <div data-screen-label="Filter bar" style="position:sticky; top:88px; z-index:30; background:#FFFFFF; border-top:1.5px solid #10264A; border-bottom:1.5px solid #10264A">
     <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:16px clamp(24px, calc((100vw - 1280px) * 1000), 180px) 16px 24px; display:flex; flex-direction: {{ barDir }}; align-items: {{ barAlign }}; justify-content:space-between; gap:16px">
       <div style="display:flex; flex-direction: {{ barDir }}; gap:12px; width: {{ selectsW }}">
@@ -130,6 +131,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       </div>
     </div>
   </div>
+  </sc-if>
 
   <!-- ARCHIVE · GRID -->
   <section data-screen-label="Project grid" style="padding:clamp(56px, 6vw, 88px) 0 clamp(72px, 9vw, 140px)">
@@ -156,6 +158,14 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
         <div style="padding:72px 0; display:flex; flex-direction:column; align-items:flex-start; gap:16px">
           <p style="margin:0; font:800 28px/1.2 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820">No projects match these filters.</p>
           <a href="{{ clearHref }}" onClick="{{ clearFilters }}" style="font:500 16px Inter, system-ui, sans-serif; color:#0B4A8F; text-decoration:underline; text-underline-offset:4px">Clear filters and show everything</a>
+        </div>
+      </sc-if>
+      <sc-if value="{{ noneYet }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:96px 0 72px; display:flex; flex-direction:column; align-items:flex-start; gap:20px; max-width:620px">
+          <p style="margin:0; font:800 clamp(26px, 3vw, 34px)/1.15 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Our project pages are being photographed.</p>
+          <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47; text-wrap:pretty">We build for private owners, so a job only appears here once the owner is happy for it to. We are working through that now, and this page will fill up as they come back to us.</p>
+          <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47; text-wrap:pretty">In the meantime, come and see the work in person. Tell us what you are planning and we will walk you through what we have built on this island, and what it took.</p>
+          <a href="/contact" style="margin-top:8px; display:inline-flex; align-items:center; gap:12px; background:#10264A; color:#FFFFFF; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none">Request an estimate <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
       </sc-if>
 
@@ -576,7 +586,9 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const P = Component.PROJECTS;
+    // Only projects cleared for publication reach the archive grid. Everything
+    // else stays in PROJECTS as data until its copy and owner permission land.
+    const P = Component.PROJECTS.filter((x) => Component.isPublished(x));
     const { emailHref, emailText, menuOpen, scrolled, vw, slug, type, loc, page, gridOpacity, hover, pnHover, lbOpen, lbIndex, sending, sendFailed } = this.state;
     const d = vw >= 1024, m = vw < 768;
     const project = this._project(slug);
@@ -639,11 +651,13 @@ class Component extends DCLogic {
       onLoc: (e) => this._setFilter({ loc: e.target.value }),
       barDir: m ? 'column' : 'row', barAlign: m ? 'stretch' : 'center',
       selectsW: m ? '100%' : 'auto', selectW: m ? '100%' : '240px',
-      countText: filtered.length ? 'Showing ' + start + '–' + end + ' of ' + filtered.length + ' project' + (filtered.length === 1 ? '' : 's') : 'No projects match these filters',
+      countText: P.length === 0 ? '' : (filtered.length ? 'Showing ' + start + '–' + end + ' of ' + filtered.length + ' project' + (filtered.length === 1 ? '' : 's') : 'No projects match these filters'),
       filtersActive: !!(type || loc),
       clearHref: this._href({}),
       clearFilters: (e) => { e.preventDefault(); this._setFilter({ type: '', loc: '' }); },
-      hasResults: filtered.length > 0, noResults: filtered.length === 0,
+      hasResults: filtered.length > 0,
+      noResults: filtered.length === 0 && P.length > 0,
+      hasAny: P.length > 0, noneYet: P.length === 0,
       gridCols: d ? 'repeat(3, minmax(0, 1fr))' : m ? '1fr' : 'repeat(2, minmax(0, 1fr))',
       gridOpacity,
       cards: slice.map((p) => {
