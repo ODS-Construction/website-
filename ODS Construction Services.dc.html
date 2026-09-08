@@ -31,7 +31,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"GeneralContractor","@id":"https://www.odsconstruction.com/#organization","url":"https://www.odsconstruction.com","email":"info@odsconstruction.com","name":"ODS Construction","slogan":"Built Right, Built to Last.","telephone":"+1-242-470-8131","foundingDate":"2000","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"},"address":{"@type":"PostalAddress","streetAddress":"Dry Hill Rd","addressLocality":"Palmetto Point","addressRegion":"Eleuthera","addressCountry":"BS"}},{"@type":"Service","name":"New Home Construction","serviceType":"Custom home construction","provider":{"@id":"https://www.odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://www.odsconstruction.com/services#new-home-construction"},{"@type":"Service","name":"Renovations & Remodels","serviceType":"Residential renovation","provider":{"@id":"https://www.odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://www.odsconstruction.com/services#renovations"},{"@type":"Service","name":"Additions & Extensions","serviceType":"Home additions","provider":{"@id":"https://www.odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://www.odsconstruction.com/services#additions"},{"@type":"Service","name":"Swimming Pool Construction","serviceType":"Concrete pool construction","provider":{"@id":"https://www.odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://www.odsconstruction.com/services#pools"},{"@type":"Service","name":"Property Management","serviceType":"Residential property management","provider":{"@id":"https://www.odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://www.odsconstruction.com/services#property-management"},{"@type":"Service","name":"Roofing, Docks & Specialty Trades","serviceType":"Roofing, docks and specialty trades","provider":{"@id":"https://www.odsconstruction.com/#organization"},"areaServed":"Eleuthera, The Bahamas","url":"https://www.odsconstruction.com/services#specialty"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.odsconstruction.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.odsconstruction.com/services"}]}</script>
 <script src="./support.js"></script>
-<script src="./image-slot.js"></script>
 </head>
 <body>
 <x-dc>
@@ -91,9 +90,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
       <h1 style="margin:0; font:800 clamp(40px, 5.5vw, 76px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF">Our Services</h1>
       <p style="margin:0; max-width:460px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">ODS Construction builds and maintains homes across Eleuthera: new construction, renovations, additions, pools, roofing and property management, carried by one contractor from the first site walk to the final walkthrough.</p>
     </div>
-    <div style="position:relative; min-height:0; overflow:hidden; aspect-ratio: {{ headerImgRatio }}">
-      <div style="position:absolute; inset:0"><image-slot id="services-header" shape="rect" placeholder="services-header.jpg — 1400×1100"></image-slot></div>
-    </div>
   </div>
 </section>
 
@@ -105,14 +101,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 3 BLOCK 01 · New Home Construction (text left / image right) -->
 <section id="new-home-construction" data-screen-label="01 New Home Construction" style="padding:0 0 clamp(72px, 9vw, 140px)">
-  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsTextLeft }}; align-items:center; row-gap:40px">
-    <div style="order: {{ imgRightOrder }}; min-width:0">
-      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
-        <image-slot id="service-new-construction" shape="rect" placeholder="service-new-construction.jpg — 1400×1000"></image-slot>
-      </div>
-      <p style="margin:12px 24px 0 0; padding-left: {{ captionPadLeft }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">New home construction, Eleuthera</p>
-    </div>
-    <div style="order: {{ textLeftOrder }}; min-width:0; padding:0 clamp(24px, 5vw, 80px) 0 max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
+    <div style="min-width:0">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">New Home Construction</h2>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">A custom home is the longest relationship you'll have with a contractor. We take one from a cleared site through to the day you turn the key (structure, envelope, systems and finishes), built for the conditions this island actually has rather than the ones a mainland drawing assumes.</p>
@@ -143,14 +133,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 4 BLOCK 02 · Renovations (image left / text right) -->
 <section id="renovations" data-screen-label="02 Renovations" style="padding:0 0 clamp(72px, 9vw, 140px)">
-  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsImgLeft }}; align-items:center; row-gap:40px">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
     <div style="min-width:0">
-      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
-        <image-slot id="service-renovations" shape="rect" placeholder="service-renovations.jpg — 1400×1000"></image-slot>
-      </div>
-      <p style="margin:12px 0 0 24px; padding-right: {{ captionPadRight }}; text-align: {{ captionAlignLeftImg }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Interior renovation in progress</p>
-    </div>
-    <div style="min-width:0; padding:0 max(24px, calc((100vw - 1240px) / 2)) 0 clamp(24px, 5vw, 80px); box-sizing:border-box">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Renovations &amp; Remodels</h2>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Renovation is harder than new construction, because you're building around something that already exists and doesn't always match its drawings. We survey and photograph everything before the first wall opens, so what we find inside becomes a documented change with a number attached, not a conversation at the end of the job about why the bill grew.</p>
@@ -181,14 +165,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 5 BLOCK 03 · Additions (text left / image right) -->
 <section id="additions" data-screen-label="03 Additions" style="padding:0 0 clamp(72px, 9vw, 140px)">
-  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsTextLeft }}; align-items:center; row-gap:40px">
-    <div style="order: {{ imgRightOrder }}; min-width:0">
-      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
-        <image-slot id="service-additions" shape="rect" placeholder="service-additions.jpg — 1400×1000"></image-slot>
-      </div>
-      <p style="margin:12px 24px 0 0; padding-left: {{ captionPadLeft }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Second-storey addition, central Eleuthera</p>
-    </div>
-    <div style="order: {{ textLeftOrder }}; min-width:0; padding:0 clamp(24px, 5vw, 80px) 0 max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
+    <div style="min-width:0">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Additions &amp; Extensions</h2>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">An addition done well doesn't read as an addition. That means matching the roofline, the wall finishes and the details of the existing house closely enough that a visitor can't tell where the old building stops, and tying the new structure back into the old one properly, so it behaves as one building in a storm rather than two.</p>
@@ -219,14 +197,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 6 BLOCK 04 · Pools (image left / text right) -->
 <section id="pools" data-screen-label="04 Pools" style="padding:0 0 clamp(72px, 9vw, 140px)">
-  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsImgLeft }}; align-items:center; row-gap:40px">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
     <div style="min-width:0">
-      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
-        <image-slot id="service-pools" shape="rect" placeholder="service-pools.jpg — 1400×1000"></image-slot>
-      </div>
-      <p style="margin:12px 0 0 24px; padding-right: {{ captionPadRight }}; text-align: {{ captionAlignLeftImg }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Concrete pool construction, Governors Harbour</p>
-    </div>
-    <div style="min-width:0; padding:0 max(24px, calc((100vw - 1240px) / 2)) 0 clamp(24px, 5vw, 80px); box-sizing:border-box">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Swimming Pool Construction</h2>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">We build concrete pools: excavated, steel-reinforced and formed on site, not dropped in as a shell. That's the right way to build here, because a concrete pool can be shaped to the site rather than the site being reshaped for it, and because it will still be there in thirty years.</p>
@@ -257,14 +229,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 7 BLOCK 05 · Property Management (text left / image right) -->
 <section id="property-management" data-screen-label="05 Property Management" style="padding:0 0 clamp(72px, 9vw, 140px)">
-  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsTextLeft }}; align-items:center; row-gap:40px">
-    <div style="order: {{ imgRightOrder }}; min-width:0">
-      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
-        <image-slot id="service-property-management" shape="rect" placeholder="service-property-management.jpg — 1400×1000"></image-slot>
-      </div>
-      <p style="margin:12px 24px 0 0; padding-left: {{ captionPadLeft }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Managed property, Eleuthera</p>
-    </div>
-    <div style="order: {{ textLeftOrder }}; min-width:0; padding:0 clamp(24px, 5vw, 80px) 0 max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
+    <div style="min-width:0">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Property Management</h2>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">A house that sits empty for eight months a year needs someone looking after it. Salt, damp, storms and vegetation don't take the off-season off, and the difference between a small repair and a large one is usually just how long it went unnoticed. We manage properties for owners who aren't here, on a fixed monthly fee with any work billed separately.</p>
@@ -295,14 +261,8 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 8 BLOCK 06 · Specialty (image left / text right, with button) -->
 <section id="specialty" data-screen-label="06 Roofing, Docks & Specialty" style="padding:0 0 clamp(72px, 9vw, 140px)">
-  <div data-reveal="1" style="display:grid; grid-template-columns: {{ colsImgLeft }}; align-items:center; row-gap:40px">
+  <div data-reveal="1" style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
     <div style="min-width:0">
-      <div style="position:relative; aspect-ratio: {{ imgRatio }}">
-        <image-slot id="service-specialty" shape="rect" placeholder="service-specialty.jpg — 1400×1000"></image-slot>
-      </div>
-      <p style="margin:12px 0 0 24px; padding-right: {{ captionPadRight }}; text-align: {{ captionAlignLeftImg }}; font:italic 400 13px/1.4 Inter, system-ui, sans-serif; color:#7A828C">Standing seam metal roof replacement</p>
-    </div>
-    <div style="min-width:0; padding:0 max(24px, calc((100vw - 1240px) / 2)) 0 clamp(24px, 5vw, 80px); box-sizing:border-box">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px; align-items:flex-start">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Roofing, Docks &amp; Specialty Trades</h2>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Not everything fits neatly into a category. We do full roof tear-off and replacement, including standing seam metal systems specified for hurricane exposure. We build private docks and waterfront structures designed for the site's exposure and water depth. And we self-perform tile and stone, countertop fabrication and finishing, cabinetry installation and mechanical work, trades most contractors hand to someone else.</p>
@@ -575,17 +535,8 @@ class Component extends DCLogic {
       headerShadow: scrolled ? '0 1px 0 #DDE1E5' : '0 1px 0 rgba(221,225,229,0)',
       bandRef: this.bandRef,
       ringRef: this.ringRef,
-      splitCols: d ? '1fr 1fr' : '1fr',
-      headerImgRatio: d ? 'auto' : '16/9',
-      colsTextLeft: d ? 'minmax(0, 1fr) 55%' : '1fr',
-      colsImgLeft: d ? '55% minmax(0, 1fr)' : '1fr',
-      imgRightOrder: d ? '2' : '1',
-      textLeftOrder: d ? '1' : '2',
-      imgRatio: d ? '7/5' : '4/3',
-      textMax: d ? '420px' : 'none',
-      captionPadLeft: d ? '0' : '24px',
-      captionPadRight: d ? '0' : '24px',
-      captionAlignLeftImg: d ? 'right' : 'left',
+      splitCols: '1fr',
+      textMax: '780px',
       showBadge: (this.props.showBadge ?? true) && vw >= 1024 && !menuOpen,
       socialLinks: [
         { href: this.props.instagramUrl, label: 'ODS Construction on Instagram', abbr: 'IG' },

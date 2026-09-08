@@ -32,7 +32,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.odsconstruction.com/#website","url":"https://www.odsconstruction.com/","name":"ODS Construction","inLanguage":"en","publisher":{"@id":"https://www.odsconstruction.com/#organization"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.odsconstruction.com/#faq","mainEntity":[{"@type":"Question","name":"Why should we hire ODS Construction?","acceptedAnswer":{"@type":"Answer","text":"Twenty-six years of building on this island, and a crew that self-performs most of the work instead of handing it to whoever is available. That means the schedule is ours to hold, the quality is ours to control, and there's one person answering for the job. The owner is on site."}},{"@type":"Question","name":"What size projects do you take on?","acceptedAnswer":{"@type":"Answer","text":"Everything from a single bathroom or a roof replacement up to a house built from the ground up. We run several projects at once and we'll tell you honestly if a job isn't a good fit for us or if the timing doesn't work."}},{"@type":"Question","name":"How do you handle materials and shipping?","acceptedAnswer":{"@type":"Answer","text":"Most of what goes into a build here is sourced from South Florida and shipped in on consolidated freight. We carry the full landed cost (freight, import duty, VAT) in the estimate from the start, and we order long-lead items early so the schedule is built around their arrival rather than interrupted by it."}},{"@type":"Question","name":"Which parts of Eleuthera do you serve?","acceptedAnswer":{"@type":"Answer","text":"The whole island, from Harbour Island in the north to South Eleuthera, and we're based in Palmetto Point. If you're unsure whether your site is workable for us, call and ask."}},{"@type":"Question","name":"What does the estimate process cost?","acceptedAnswer":{"@type":"Answer","text":"The site visit and the written estimate are free. You get materials, labour and the total, with the scope written out and the exclusions listed, so you know what you are buying before you commit to anything. Anything that isn't clear, ask and we'll talk it through."}}]}</script>
 <script src="./support.js"></script>
-<script src="./image-slot.js"></script>
 </head>
 <body>
 <x-dc>
@@ -87,9 +86,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 1 HERO -->
 <section id="top" data-screen-label="Hero" style="position:relative; min-height:max(720px, 100vh); display:flex; align-items:center; background:#10264A; overflow:hidden">
-  <div style="position:absolute; inset:0">
-    <image-slot id="hero-aerial" shape="rect" placeholder="hero-aerial.jpg — 2400×1350 (16:9) · Aerial of a finished ODS property"></image-slot>
-  </div>
   <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(16,38,74,0.88) 0%, rgba(16,38,74,0.55) 50%, rgba(16,38,74,0.15) 100%); pointer-events:none"></div>
   <div style="position:relative; z-index:1; max-width:1240px; width:100%; margin:0 auto; padding:120px clamp(24px, calc((100vw - 1280px) * 1000), 180px) 120px 24px; box-sizing:border-box; pointer-events:none">
     <div style="max-width:760px; display:flex; flex-direction:column; align-items:flex-start; gap:32px; pointer-events:auto">
@@ -106,9 +102,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 
 <!-- 2 ABOUT -->
 <section id="about" data-screen-label="About" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 480px), 1fr)); background:#FFFFFF">
-  <div style="position:relative; width:100%; min-height:420px; aspect-ratio:6/5">
-    <image-slot id="about-site" shape="rect" placeholder="about-site.jpg — 1200×1000 (6:5) · Crew working, or the owner on site"></image-slot>
-  </div>
   <div data-reveal="1" style="position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:center; padding:clamp(72px, 8vw, 120px) max(clamp(24px, 7vw, 120px), clamp(24px, calc((100vw - 1280px) * 1000), 180px)) clamp(72px, 8vw, 120px) clamp(24px, 7vw, 120px); box-sizing:border-box">
     <div aria-hidden="true" style="position:absolute; right:-40px; top:50%; transform:translateY(-50%); font:800 clamp(280px, 30vw, 460px)/1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.05em; color:transparent; -webkit-text-stroke:2px rgba(16,38,74,0.14); opacity:0.3; pointer-events:none; user-select:none">ODS</div>
     <div style="position:relative; max-width:620px; display:flex; flex-direction:column; gap:28px">
@@ -125,9 +118,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 <!-- 3 SERVICES OVERVIEW -->
 <section id="services" data-screen-label="Services" style="padding:clamp(72px, 9vw, 140px) 0 0">
   <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:clamp(56px, 6vw, 88px)">
-    <div data-reveal="1" style="position:relative; aspect-ratio:2/1; min-height:260px">
-      <image-slot id="services-hero" shape="rect" placeholder="services-hero.jpg — 2000×1000 (2:1)"></image-slot>
-    </div>
     <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap:clamp(40px, 5vw, 80px)">
       <div style="display:flex; flex-direction:column; gap:28px">
         <div style="display:inline-flex; flex-direction:column; gap:12px; align-self:flex-start">
@@ -155,9 +145,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
   <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:clamp(80px, 9vw, 140px)">
 
     <article data-reveal="1" style="display:flex; flex-wrap:wrap; gap:clamp(40px, 5vw, 80px); align-items:center">
-      <div style="flex:1 1 400px; min-width:0; position:relative; aspect-ratio:4/5; order:1">
-        <image-slot id="service-01" shape="rect" placeholder="service-01-new-construction.jpg — 1000×1250 (4:5)"></image-slot>
-      </div>
       <div style="flex:1 1 400px; min-width:0; order:2; display:flex; flex-direction:column; gap:24px">
         <span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C"><span style="color:#101820">01</span> / 05</span>
         <h3 style="margin:0; padding-bottom:24px; border-bottom:1px solid #DDE1E5; font:800 clamp(28px, 3vw, 42px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Custom Home Construction</h3>
@@ -167,9 +154,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     </article>
 
     <article data-reveal="1" style="display:flex; flex-wrap:wrap; gap:clamp(40px, 5vw, 80px); align-items:center">
-      <div style="flex:1 1 400px; min-width:0; position:relative; aspect-ratio:4/5; order:2">
-        <image-slot id="service-02" shape="rect" placeholder="service-02-renovations.jpg — 1000×1250 (4:5)"></image-slot>
-      </div>
       <div style="flex:1 1 400px; min-width:0; order:1; display:flex; flex-direction:column; gap:24px">
         <span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C"><span style="color:#101820">02</span> / 05</span>
         <h3 style="margin:0; padding-bottom:24px; border-bottom:1px solid #DDE1E5; font:800 clamp(28px, 3vw, 42px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Renovations &amp; Remodels</h3>
@@ -179,9 +163,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     </article>
 
     <article data-reveal="1" style="display:flex; flex-wrap:wrap; gap:clamp(40px, 5vw, 80px); align-items:center">
-      <div style="flex:1 1 400px; min-width:0; position:relative; aspect-ratio:4/5; order:1">
-        <image-slot id="service-03" shape="rect" placeholder="service-03-additions.jpg — 1000×1250 (4:5)"></image-slot>
-      </div>
       <div style="flex:1 1 400px; min-width:0; order:2; display:flex; flex-direction:column; gap:24px">
         <span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C"><span style="color:#101820">03</span> / 05</span>
         <h3 style="margin:0; padding-bottom:24px; border-bottom:1px solid #DDE1E5; font:800 clamp(28px, 3vw, 42px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Additions &amp; Extensions</h3>
@@ -191,9 +172,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     </article>
 
     <article data-reveal="1" style="display:flex; flex-wrap:wrap; gap:clamp(40px, 5vw, 80px); align-items:center">
-      <div style="flex:1 1 400px; min-width:0; position:relative; aspect-ratio:4/5; order:2">
-        <image-slot id="service-04" shape="rect" placeholder="service-04-pools.jpg — 1000×1250 (4:5)"></image-slot>
-      </div>
       <div style="flex:1 1 400px; min-width:0; order:1; display:flex; flex-direction:column; gap:24px">
         <span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C"><span style="color:#101820">04</span> / 05</span>
         <h3 style="margin:0; padding-bottom:24px; border-bottom:1px solid #DDE1E5; font:800 clamp(28px, 3vw, 42px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Swimming Pool Construction</h3>
@@ -203,9 +181,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     </article>
 
     <article data-reveal="1" style="display:flex; flex-wrap:wrap; gap:clamp(40px, 5vw, 80px); align-items:center">
-      <div style="flex:1 1 400px; min-width:0; position:relative; aspect-ratio:4/5; order:1">
-        <image-slot id="service-05" shape="rect" placeholder="service-05-property-management.jpg — 1000×1250 (4:5)"></image-slot>
-      </div>
       <div style="flex:1 1 400px; min-width:0; order:2; display:flex; flex-direction:column; gap:24px">
         <span style="font:600 13px Inter, system-ui, sans-serif; letter-spacing:0.1em; color:#7A828C"><span style="color:#101820">05</span> / 05</span>
         <h3 style="margin:0; padding-bottom:24px; border-bottom:1px solid #DDE1E5; font:800 clamp(28px, 3vw, 42px)/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Property Management</h3>
@@ -284,9 +259,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 <!-- 7 WHERE WE BUILD -->
 <section id="where" data-screen-label="Where we build" style="padding:0 0 clamp(72px, 9vw, 140px)">
   <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px; display:flex; flex-direction:column; gap:clamp(56px, 6vw, 88px)">
-    <div data-reveal="1" style="position:relative; aspect-ratio:2/1; min-height:260px">
-      <image-slot id="where-we-build" shape="rect" placeholder="where-we-build.jpg — 2400×1200 (2:1)"></image-slot>
-    </div>
     <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap:clamp(32px, 5vw, 80px); align-items:end">
       <div style="display:flex; flex-direction:column; gap:28px">
         <div style="display:inline-flex; flex-direction:column; gap:12px; align-self:flex-start">
@@ -328,6 +300,13 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
         </li>
       </sc-for>
     </ul>
+  </div>
+</section>
+
+<!-- SITE IN PROGRESS -->
+<section data-screen-label="Site in progress" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 24px">
+    <p style="margin:0; max-width:640px; padding-top:32px; border-top:1px solid #DDE1E5; font:400 15px/1.6 Inter, system-ui, sans-serif; color:#7A828C">This site is still being built out. Photographs of completed work, more detail on individual projects and feedback from the owners we have built for will be added over time.</p>
   </div>
 </section>
 

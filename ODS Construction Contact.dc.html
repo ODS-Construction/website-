@@ -31,7 +31,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact ODS Construction","url":"https://www.odsconstruction.com/contact","mainEntity":{"@type":"GeneralContractor","@id":"https://www.odsconstruction.com/#organization","url":"https://www.odsconstruction.com","email":"info@odsconstruction.com","name":"ODS Construction","telephone":"+1-242-470-8131","foundingDate":"2000","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"},"address":{"@type":"PostalAddress","streetAddress":"Dry Hill Rd","addressLocality":"Palmetto Point","addressRegion":"Eleuthera","addressCountry":"BS"},"areaServed":["Harbour Island","North Eleuthera","Gregory Town","Hatchet Bay","Governors Harbour","Palmetto Point","Windermere Island","Rock Sound","Tarpum Bay","South Eleuthera"],"contactPoint":{"@type":"ContactPoint","telephone":"+1-242-470-8131","contactType":"sales","areaServed":"BS","availableLanguage":"en"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.odsconstruction.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.odsconstruction.com/contact"}]}</script>
 <script src="./support.js"></script>
-<script src="./image-slot.js"></script>
 </head>
 <body>
 <x-dc>
@@ -90,9 +89,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     <div style="display:flex; flex-direction:column; justify-content:center; gap:20px; padding:clamp(56px, 7vw, 88px) clamp(32px, 5vw, 80px) clamp(56px, 7vw, 88px) max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
       <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.7)">Get in touch</span>
       <h1 style="margin:0; max-width:12ch; font:800 clamp(40px, 5.5vw, 76px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF; text-wrap:pretty">Let's talk about your project</h1>
-    </div>
-    <div style="position:relative; min-height:0; overflow:hidden; aspect-ratio: {{ headerImgRatio }}">
-      <div style="position:absolute; inset:0"><image-slot id="contact-header" shape="rect" placeholder="contact-header.jpg — 1400×1100"></image-slot></div>
     </div>
   </div>
 </section>
@@ -542,8 +538,7 @@ class Component extends DCLogic {
       ringRef: this.ringRef,
       formRef: this.formRef,
       fileRef: this.fileRef,
-      splitCols: d ? '1fr 1fr' : '1fr',
-      headerImgRatio: d ? 'auto' : '16/9',
+      splitCols: '1fr',
       mainCols: d ? 'minmax(0, 58fr) minmax(0, 30fr)' : '1fr',
       asideTop: d ? '14px' : '0',
       fieldCols: vw >= 640 ? '1fr 1fr' : '1fr',
