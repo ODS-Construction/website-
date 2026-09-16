@@ -22,11 +22,6 @@
       "permanent": true
     },
     {
-      "source": "/services/property-management",
-      "destination": "/services#property-management",
-      "permanent": true
-    },
-    {
       "source": "/services/:slug",
       "destination": "/services",
       "permanent": true
