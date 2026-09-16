@@ -90,7 +90,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     <div style="display:flex; flex-direction:column; justify-content:center; gap:28px; padding:clamp(64px, 8vw, 96px) clamp(32px, 5vw, 80px) 64px max(24px, calc((100vw - 1240px) / 2)); box-sizing:border-box">
       <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.7)">Who we are</span>
       <h1 style="margin:0; font:800 clamp(40px, 5.5vw, 76px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#FFFFFF; text-wrap:pretty">Twenty‑six years on this island</h1>
-      <p style="margin:0; max-width:460px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">ODS Construction builds and looks after homes on Eleuthera. We're based in&nbsp;Palmetto Point, we self-perform most of what we do, and the owner is on site.</p>
+      <p style="margin:0; max-width:460px; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#FFFFFF">ODS Construction builds homes on Eleuthera. We're based in&nbsp;Palmetto Point, we self-perform most of what we do, and the owner is on site.</p>
     </div>
   </div>
 </section>
@@ -107,7 +107,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     <div style="min-width:0">
       <div style="max-width: {{ textMax }}; display:flex; flex-direction:column; gap:28px">
         <h2 style="margin:0; font:800 clamp(36px, 4.6vw, 66px)/1.02 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">Who we are</h2>
-        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">ODS Construction is a family-run builder working the length of Eleuthera. We build new homes, renovate and extend existing ones, put in concrete pools, replace roofs, build docks, and maintain properties for owners who aren't on the island year-round.</p>
+        <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">ODS Construction is a family-run builder working the length of Eleuthera. We build new homes, renovate and extend existing ones, put in concrete pools, replace roofs and build docks.</p>
         <p style="margin:0; font:400 17px/1.65 Inter, system-ui, sans-serif; color:#3A3F47">Most of our clients are American, British and European owners building or keeping a house here. Many of them are several thousand miles away for much of the year, which shapes how we run a job more than anything else does.</p>
       </div>
     </div>
@@ -333,7 +333,6 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
               <option value="Addition">Addition</option>
               <option value="Pool">Pool</option>
               <option value="Roofing">Roofing</option>
-              <option value="Property Management">Property Management</option>
               <option value="Other">Other</option>
             </select>
             <label for="f-message" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Message</label>
@@ -388,9 +387,7 @@ class Component extends DCLogic {
       { t: 'Why it matters to your schedule', b: "A subcontracted trade turns up when it suits them. On an island where the next available crew might be a week and a ferry away, that's how a two-month job becomes a five-month job. Owning the labour is the only reliable answer to it." },
     ],
     accIsland: [
-      { t: 'How we buy materials', b: 'Most of what goes into a build here comes from South Florida and ships in on consolidated freight. We carry the full landed cost (freight, import duty and VAT) in the estimate from the beginning, so the number you approve is the number the job costs rather than one that grows when the containers land.' },
-      { t: 'How we organise a job', b: "Our estimates and project documentation are organised on CSI MasterFormat divisions, the standard framework architects and engineers already work in. It means your drawings, our estimate and the cost tracking all line up, and nothing falls between two trades because nobody was sure whose scope it was." },
-      { t: "How we report when you're not here", b: "Progress photographs on a regular schedule, a written record of anything found once walls open up, and a straight answer about what it means for cost and time. You should never approve something you can't see." },
+      { t: 'How we organise a job', b: "Our estimates are organised on CSI MasterFormat divisions, the standard framework architects and engineers already work in, so your drawings and our estimate line up and nothing falls between two trades." },
     ],
   };
 
