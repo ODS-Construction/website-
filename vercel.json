@@ -45,6 +45,10 @@
       "destination": "/ODS Construction Process.dc.html"
     },
     {
+      "source": "/projects",
+      "destination": "/ODS Construction Projects.dc.html"
+    },
+    {
       "source": "/services",
       "destination": "/ODS Construction Services.dc.html"
     },
