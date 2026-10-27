@@ -50,6 +50,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     <sc-if value="{{ isDesktopNav }}" hint-placeholder-val="{{ true }}">
       <nav aria-label="Primary" style="display:flex; align-items:center; gap:36px">
         <a href="/services" style="font:600 15px Inter, system-ui, sans-serif; color:#101820; text-decoration:none" style-hover="color:#0B4A8F">Services</a>
+        <a href="/projects" style="font:600 15px Inter, system-ui, sans-serif; color:#101820; text-decoration:none" style-hover="color:#0B4A8F">Projects</a>
         <a href="/process" style="font:600 15px Inter, system-ui, sans-serif; color:#101820; text-decoration:none" style-hover="color:#0B4A8F">Process</a>
         <a href="/about" style="font:600 15px Inter, system-ui, sans-serif; color:#101820; text-decoration:none" style-hover="color:#0B4A8F">About</a>
         <a href="/contact" style="font:600 15px Inter, system-ui, sans-serif; color:#101820; text-decoration:none" style-hover="color:#0B4A8F">Contact</a>
@@ -76,6 +77,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
     </div>
     <nav aria-label="Primary" style="display:flex; flex-direction:column; gap:8px; margin-top:48px">
       <a href="/services" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Services</a>
+      <a href="/projects" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Projects</a>
       <a href="/process" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Process</a>
       <a href="/about" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">About</a>
       <a href="/contact" onClick="{{ toggleMenu }}" style="font:800 36px/1.1 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-decoration:none; padding:12px 0; border-bottom:1px solid #DDE1E5">Contact</a>
@@ -270,6 +272,26 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
 </section>
 
 
+<!-- 8 FOR DEVELOPERS AND ARCHITECTS -->
+<section id="developers" data-screen-label="For developers and architects" style="padding:0 0 clamp(72px, 9vw, 140px)">
+  <div style="max-width:1240px; margin:0 auto; box-sizing:border-box; padding:0 clamp(24px, calc((100vw - 1280px) * 1000), 180px) 0 24px">
+    <div data-reveal="1" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap:clamp(32px, 5vw, 80px); align-items:start">
+      <div style="display:flex; flex-direction:column; gap:28px">
+        <div style="display:inline-flex; flex-direction:column; gap:12px; align-self:flex-start">
+          <span style="font:600 12px Inter, system-ui, sans-serif; letter-spacing:0.14em; text-transform:uppercase; color:#7A828C">Developments</span>
+          <span style="display:block; height:1px; width:100%; min-width:88px; background:#DDE1E5"></span>
+        </div>
+        <h2 style="margin:0; font:800 clamp(34px, 4.5vw, 64px)/1.05 Manrope, Archivo, system-ui, sans-serif; letter-spacing:-0.02em; color:#101820; text-wrap:pretty">For Developers and Architects</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <p style="margin:0; font:italic 700 clamp(17px, 1.3vw, 19px)/1.6 Inter, system-ui, sans-serif; color:#10264A; max-width:62ch">Building a group of homes on Eleuthera brings its own problems: materials arriving on a shared shipping schedule, crews that need to be on the island and stay there, and a local contractor who can price island costs accurately the first time.</p>
+        <p style="margin:0; font:400 clamp(16px, 1.15vw, 17px)/1.65 Inter, system-ui, sans-serif; color:#3A3F47; max-width:62ch">ODS Construction builds from your architect's drawings and specifications. We price imported materials delivered to site, with duty, VAT and freight included, so the numbers hold when the containers land. We plan long-lead orders across several houses at once, and we are on site every day to run the work.</p>
+        <p style="margin:0; font:400 clamp(16px, 1.15vw, 17px)/1.65 Inter, system-ui, sans-serif; color:#3A3F47; max-width:62ch">We can take on individual homes within a larger development or work alongside your main contractor on a defined scope. Our company profile is available on request.</p>
+        <a href="mailto:info@odsconstruction.com?subject=Company%20profile%20request" style="align-self:flex-start; margin-top:8px; display:inline-flex; align-items:center; gap:12px; background:transparent; color:#10264A; padding:18px 32px; font:600 16px Inter, system-ui, sans-serif; border-radius:2px; text-decoration:none; border:1.5px solid #10264A" style-hover="background:#10264A; color:#FFFFFF">Request our company profile <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" style="stroke-width:1.5px; stroke-linecap:round; stroke-linejoin:round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 9 FAQ -->
 <section id="faq" data-screen-label="FAQ" style="padding:0 0 clamp(72px, 9vw, 140px)">
@@ -391,6 +413,7 @@ input::placeholder, textarea::placeholder { color: #7A828C; }
         <h3 style="margin:0; font:600 15px Inter, system-ui, sans-serif; color:#101820">Links</h3>
         <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px">
           <li><a href="/services" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Services</a></li>
+          <li><a href="/projects" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Projects</a></li>
           <li><a href="/process" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Process</a></li>
           <li><a href="/about" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">About</a></li>
           <li><a href="/contact" style="display:inline-block; padding:6px 0; margin:-6px 0; font:400 16px Inter, system-ui, sans-serif; color:#3A3F47; text-decoration:none" style-hover="color:#0B4A8F">Contact</a></li>
